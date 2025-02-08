@@ -5,6 +5,20 @@ body {
     display: flex;
     flex-direction: column;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+p, a {
+    font-size: 1.2rem;
 }
 
 h1, h2, p, a {
@@ -13,9 +27,7 @@ h1, h2, p, a {
     padding: 0;
 }
 
-main, footer {
-    display: flex;
-    flex-direction: column;
+main {
     flex-grow: 1;
 }
 
@@ -30,12 +42,10 @@ nav a {
 }
 
 .content {
-    border: 1px solid blue;
     flex-grow: 2;
-    margin: 50px 0 ;
+    margin: 50px 0;
     padding: 20px;
     min-height: 400px;
-    max-height: 100vh;
 }
 
 #landing-section {
@@ -48,7 +58,7 @@ nav a {
 }
 
 #main-text {
-    max-width: 40vw;
+    max-width: 35vw;
     margin-bottom: 15px;
     display: flex;
     flex-direction: column;
@@ -68,7 +78,7 @@ nav a {
 }
 
 #about-section {
-    display: flex; 
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -93,26 +103,25 @@ nav a {
 }
 
 .about-1 a {
-    margin-top: auto; 
+    margin-top: auto;
 }
 
 .about-2 {
     flex: 1;
     min-width: 160px;
-    max-width: 220px;
+    max-width: 250px;
 }
 
 #pfp {
     aspect-ratio: 1 / 1;
     object-fit: cover;
     width: 100%;
-    max-width: 250px;
     border-radius: 10px;
 }
 
 .tech-logo {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     width: 100%;
@@ -123,17 +132,16 @@ nav a {
 footer {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     gap: 20px;
     flex-grow: 1;
+    margin-top: auto;
 }
 
 .footer-section {
     text-align: center;
-    margin-top: 20px; 
+    margin-top: auto; /* Pushes it to the bottom */
 }
-
 
 .contact-section {
     display: flex;
@@ -148,4 +156,42 @@ footer {
     padding: 12px;
     border-radius: 10px;
     margin-top: 40px;
+}
+
+.dev {
+    background-color: blue;
+    height: 50px;
+    width: 50px;
+}
+
+/* Media Query for Small Screens */
+@media (max-width: 768px) {
+    body {
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    p, a {
+        font-size: 1rem;
+    }
+
+    #main-text {
+        max-width: 90%;
+    }
+
+    .about-img {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tech-logo {
+        justify-content: center;
+    }
 }
