@@ -1,6 +1,6 @@
 Here's your README.md file content for your GitHub repository:  
 
-```md
+
 # Personal Portfolio Website  
 
 This is my personal portfolio website, built using **HTML, CSS, and JavaScript**. It showcases my projects, experience, and ways to contact me.  
