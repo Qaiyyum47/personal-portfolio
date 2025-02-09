@@ -4,88 +4,142 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/styles.css">
-    <title>Qaiyyum Portfolio</title>
+    <title>Qaiyyum's Portfolio</title>
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="pages/about.html">About</a>
-            <a href="pages/projects.html">Projects</a>
-            <a href="pages/contact.html">Contact</a>
-        </nav>
-    </header>
-
-    <main>
-        <div id="landing-section" class="content">
-            <div id="main-text">
-                <h1>👋Hi I'm Qaiyyum! Im a frontend developer</h1>
-                <p>I build clean, responsive websites that deliver seamless user 
-                experiences and bring your ideas to life</p>
-            </div>
-            <a href="pages/projects.html">Check my work</a>
-        </div>
-
-        <div id="about-section" class="content">
-            <div class="about-img">
-                <div class="about-1">
-                    <h2>About me👇🌟</h2>
-                    <p>I’m Muhammad Qaiyyum Bin Kamal, a web developer based in Malaysia 🇲🇾. I started with an art background in high school but found my passion 
-                        in web development, where creativity meets functionality. While pursuing a Computer Science Diploma at Universiti Putra Malaysia 🎓(UPM), 
-                        I also do freelance work to apply my skills in real-world projects. Now, I blend design and code to create clean, user-friendly websites.</p>
-                    <a href="/pages/about.html">Learn More</a>
-                </div>
-                <div class="about-2">
-                    <img id="pfp" src="/assets/img/aura blue desktop.jpg" alt="profile picture">
-                </div>
-            </div>
-
-            <h2>Technologies I Use</h2>
-            <div class="tech-logo">
-                <img src="assets/img/html.png" alt="HTML">
-                <img src="assets/img/css.png" alt="CSS">
-                <img src="assets/img/javascript.png" alt="JavaScript">
-                <img src="assets/img/react.png" alt="React">
-                <img src="assets/img/git.png" alt="Git">
-                <img src="assets/img/figma.png" alt="Figma">
-            </div>            
-        </div>
-
-        <div id="project-section" class="content">
-            <h2>Some of My Work</h2>
-            <div class="work-content">
-                
-            </div>
-        </div>
-
-        <div id="development-section" class="content">
-            <p>DEVELOPMENT PROCESS</p>
-            <h2>Get started as easy as 1, 2, 3</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit tortor eu egestas morbi sem vulputate etiam facilisis pellentesque ut quis.</p>
-            <div class="development-content">
-                <div class="dev"></div>
-                <div class="dev"></div>
-                <div class="dev"></div>
-            </div>
-        </div>
-    </main>
+    <div id="wrapper">
+        <header>
+            <nav>
+                <a href="index.html" aria-label="Home">Home</a>
+                <a href="pages/about.html" aria-label="About">About</a>
+                <a href="pages/projects.html" aria-label="Projects">Projects</a>
+                <a href="pages/contact.html" aria-label="Contact">Contact</a>
+            </nav>
+        </header>
     
-    <footer class="content">
-        <div class="contact-section">
-            <h2>Let's Connect!🤝</h2>
-            <p>I’m always open to collaborations, freelance opportunities, and tech discussions 💬.</p>
-            <p>Feel free to reach out 📩 if you’d like to work together or just chat about web development 🌍!</p>
-        </div>
-        <a id="contact" href="pages/contact.html">Contact Me</a>
+        <main>
+            <!-- Landing Section -->
+            <section id="landing-section" class="content">
+                <div id="main-text">
+                    <h1>👋 Hi, I'm Qaiyyum! A frontend developer</h1>
+                    <p>I build clean, responsive websites that deliver seamless user experiences and bring your ideas to life.</p>
+                </div>
+                <a href="pages/projects.html" aria-label="Check my work">Check my work →</a>
+            </section>
+    
+            <!-- About Section -->
+            <section id="about-section" class="content">
+                <div class="about-img">
+                    <div class="about-1">
+                        <h2>About me👇🌟</h2>
+                        <p>I’m Muhammad Qaiyyum Bin Kamal, a web developer based in Malaysia 🇲🇾. I started with an art background in high school but found my passion 
+                            in web development, where creativity meets functionality. While pursuing a Computer Science Diploma at Universiti Putra Malaysia 🎓 (UPM), 
+                            I also do freelance work to apply my skills in real-world projects. Now, I blend design and code to create clean, user-friendly websites.</p>
+                        <a href="pages/about.html" aria-label="Learn more about me">Learn More →</a>
+                    </div>
+                    <div class="about-2">
+                        <img id="pfp" src="assets/img/pfp.jpg" alt="Profile picture of Qaiyyum">
+                    </div>
+                </div>
+    
+                <h2>Technologies I Use</h2>
+                <div class="tech-logo">
+                    <div class="tech-item" data-alt="HTML">
+                        <img src="assets/img/icon/html.png" alt="HTML logo">
+                    </div>
+                    <div class="tech-item" data-alt="CSS">
+                        <img src="assets/img/icon/css.png" alt="CSS logo">
+                    </div>
+                    <div class="tech-item" data-alt="JavaScript">
+                        <img src="assets/img/icon/javascript.png" alt="JavaScript logo">
+                    </div>
+                    <div class="tech-item" data-alt="React">
+                        <img src="assets/img/icon/react.png" alt="React logo">
+                    </div>
+                    <div class="tech-item" data-alt="Git">
+                        <img src="assets/img/icon/git.png" alt="Git logo">
+                    </div>
+                    <div class="tech-item" data-alt="VS Code">
+                        <img src="assets/img/icon/vscode.png" alt="VS Code logo">
+                    </div>
+                    <div class="tech-item" data-alt="Figma">
+                        <img src="assets/img/icon/figma.png" alt="Figma logo">
+                    </div>
+                </div>
+            </section>
+    
+            <!-- Project Section -->
+            <section id="project-section" class="content">
+                <h2>🚀 Some of My Work</h2>
+                <div class="project-content">
+                    <div class="project-card">
+                        <div class="project-box"></div>
+                        <h3>React Math Game 🧮🎮</h3>
+                        <p>A fun math game built with React that helps users practice calculations interactively.</p>
+                        <a href="pages/projects.html" aria-label="Learn more about React Math Game">Learn More →</a>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-box"></div>
+                        <h3>Vet Clinic Website 🏥🐾</h3>
+                        <p>A clean, responsive website for Pawsible Veterinary Clinic, built with HTML, CSS, and JavaScript.</p>
+                        <a href="pages/projects.html" aria-label="Learn more about Vet Clinic Website">Learn More →</a>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-box"></div>
+                        <h3>AI Study Tracker 🤖📊</h3>
+                        <p>A smart study tracker that analyzes productivity using AI and machine learning.</p>
+                        <a href="pages/projects.html" aria-label="Learn more about AI Study Tracker">Learn More →</a>
+                    </div>
+                </div>
+            </section>
+    
+            <!-- Development Section -->
+            <section id="development-section" class="content">
+                <div class="dev-text">
+                    <p>DEVELOPMENT PROCESS</p>
+                    <h2>Get started as easy as 1, 2, 3</h2>
+                    <p>Building projects efficiently with a structured workflow—plan, develop, and refine to ensure a seamless user experience.</p>
+                </div>
+                <div class="dev-content">
+                    <div class="dev-card">
+                        <img src="assets/img/icon/clipboard.png" alt="Planning Icon" class="dev-icon">
+                        <h3>Planning & Strategy</h3>
+                        <p>Before writing a single line of code, I create a clear roadmap to ensure efficiency and user satisfaction.</p>
+                    </div>
+                    <div class="dev-card">
+                        <img src="assets/img/icon/code.png" alt="Code Icon" class="dev-icon">
+                        <h3>Development & Update</h3>
+                        <p>I write clean, maintainable code while ensuring smooth performance and adaptability for future improvements.</p>
+                    </div>
+                    <div class="dev-card">
+                        <img src="assets/img/icon/shuttle.png" alt="Launch Icon" class="dev-icon">
+                        <h3>Testing & Launch</h3>
+                        <p>I rigorously test for responsiveness, speed, and security before launching a polished final product.</p>
+                    </div>
+                </div>
+            </section>
+    
+            <!-- Contact Section -->
+            <section id="contact-section" class="content">
+                <h2>Let's Connect! 🤝</h2>
+                <p>I’m always open to collaborations, freelance opportunities, and tech discussions 💬.</p>
+                <p>Feel free to reach out 📩 if you’d like to work together or just chat about web development 🌍!</p><br>
+                <a id="contact" href="pages/contact.html" aria-label="Contact me">Contact Me</a>
+            </section>
+        </main>
+    </div>
 
+    <!-- Footer -->
+    <footer>
         <div class="footer-section">
-            <div class="footer logo">
+            <div class="footer-logo">
                 <div id="logo"></div>
                 <div id="social-logo"></div>
             </div>
-            <p>Copyright © 2025 Qaiyy Templates | All Rights Reserved</p>
         </div>
+        <p>Copyright © 2025 Qaiyy Templates | All Rights Reserved</p>
     </footer>
+
+    <script src="assets/js/script.js"></script>
 </body>
-<script src="assets/js/script.js"></script>
 </html>

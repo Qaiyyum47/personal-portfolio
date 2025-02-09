@@ -1,12 +1,35 @@
-body {
-    width: 75%;
-    margin: auto;
+* {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
     display: flex;
     flex-direction: column;
-    font-family: Arial, Helvetica, sans-serif;
+    align-items: center;
+    font-family: 'Geist', Arial, Helvetica, sans-serif;
     font-size: 18px;
     line-height: 1.5;
+}
+
+#wrapper {
+    width: 75%;
+    max-width: 1200px;
+    margin: auto;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Apply SemiBold font to h1 and h3 */
+h1, h3 {
+    font-family: 'Geist', sans-serif;
+    font-weight: 600; /* Ensure it picks SemiBold */
 }
 
 h1 {
@@ -21,10 +44,29 @@ p, a {
     font-size: 1.2rem;
 }
 
-h1, h2, p, a {
+a {
+    position: relative;
     text-decoration: none;
-    margin: 0;
-    padding: 0;
+    color: grey;
+    transition: color 0.3s ease-in-out;
+    display: inline-block; 
+    width: fit-content;
+}
+
+a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px; 
+    width: 0;
+    height: 2px; 
+    color: black;
+    background-color: black;
+    transition: width 0.3s ease-in-out;
+}
+
+a:hover::after {
+    width: 100%; 
 }
 
 main {
@@ -32,29 +74,57 @@ main {
 }
 
 header {
-    text-align: center;
-    margin: 30px 0;
+    position: fixed;
+    top: 0;
+    width: inherit;
+    backdrop-filter: blur(15px);
+    z-index: 1000;
+    padding-top: 15px;
+}
+
+nav {
+    width: 100%; 
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0 20px; 
+    border: 1px solid;
+    border-radius: 10px;
 }
 
 nav a {
-    margin: 20px;
-    padding: 20px;
+    color: black;
+    text-decoration: none;
+    padding: 10px 15px;
 }
 
-.content {
-    flex-grow: 2;
-    margin: 50px 0;
-    padding: 20px;
-    min-height: 400px;
-}
-
-#landing-section {
+/* Ensure sections take full screen height */
+#landing-section,
+#about-section,
+#project-section, 
+#development-section, 
+#contact-section {
+    min-height: 95vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.content {
+    flex-grow: 2;
     padding: 20px;
     min-height: 400px;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+#landing-section {
+    padding-top: 100px;
 }
 
 #main-text {
@@ -70,28 +140,35 @@ nav a {
 
 #landing-section a {
     text-decoration: none;
-    color: white;
-    background-color: gray;
+    color: black;
+    background-color: lightgray;
     padding: 12px;
     border-radius: 10px;
-    margin-top: 40px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+#landing-section a::after {
+    display: none;
+}
+
+#landing-section a:hover {
+    color: white;
+    background-color: gray;
 }
 
 #about-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     gap: 30px;
 }
 
 .about-img {
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
     width: 90%;
     gap: 20px;
     flex-wrap: wrap;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 .about-1 {
@@ -100,22 +177,33 @@ nav a {
     flex-direction: column;
     gap: 10px;
     flex-grow: 1;
+    align-items: flex-start;
 }
 
 .about-1 a {
-    margin-top: auto;
+    padding: 0;
+    border-radius: 0;
+    margin-top: 15px;
 }
+
+.about-1 p {
+    text-align: left;
+}
+
 
 .about-2 {
     flex: 1;
+    display: flex;
+    justify-content: flex-end; 
     min-width: 160px;
-    max-width: 250px;
+    max-width: 300px;
 }
 
 #pfp {
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 3/4;
     object-fit: cover;
-    width: 100%;
+    width: 80%;
+    height: auto;
     border-radius: 10px;
 }
 
@@ -124,30 +212,174 @@ nav a {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    width: 80%;
+    gap: 100px;
+    margin: 20px 0;
+}
+
+.tech-item {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tech-item img {
+    width: 80px;
+    height: auto;
+    transition: transform 0.2s ease-in-out;
+}
+
+.tech-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Tooltip */
+.tech-item::after {
+    content: attr(data-alt);
+    position: absolute;
+    bottom: -25px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+    pointer-events: none;
+}
+
+.tech-item:hover::after {
+    opacity: 1;
+}
+
+#project-section {
+    gap: 30px;
+}
+
+.project-content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
     width: 100%;
-    gap: 20px;
+}
+
+.project-card {
+    width: 300px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+}
+
+.project-card a {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-box {
+    width: 100%;
+    height: 180px;
+    background-color: lightgray;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+#development-section {
+    gap: 30px;
+    width: 100%;
+}
+
+.dev-text {
+    max-width: 600px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.dev-text h2 {
+    font-size: 2rem;
     margin-bottom: 10px;
 }
 
-footer {
+.dev-text p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.dev-content {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 1000px;
+}
+
+.dev-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    width: 310px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
-    flex-grow: 1;
-    margin-top: auto;
 }
 
-.footer-section {
-    text-align: center;
-    margin-top: auto; /* Pushes it to the bottom */
+.dev-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
 }
 
-.contact-section {
+.dev-icon {
+    width: 80px;
+    height: auto;
+    margin-bottom: 30px;
+}
+
+#contact-section {
+    min-height: 70vh;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+    padding: 50px 0;
 }
+
+#contact-section a {
+    text-decoration: none;
+    color: black;
+    background-color: lightgray;
+    padding: 12px;
+    border-radius: 10px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+#contact-section a::after {
+    display: none;
+}
+
+#contact-section a:hover {
+    color: white;
+    background-color: gray;
+}
+
+
 
 #contact {
     text-decoration: none;
@@ -155,13 +387,19 @@ footer {
     background-color: gray;
     padding: 12px;
     border-radius: 10px;
-    margin-top: 40px;
+    margin-top: 30px;
 }
 
-.dev {
-    background-color: blue;
-    height: 50px;
-    width: 50px;
+footer {
+    width: 100%;
+    min-height: 10vh;
+    background-color: lightgray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
 }
 
 /* Media Query for Small Screens */
@@ -194,4 +432,54 @@ footer {
     .tech-logo {
         justify-content: center;
     }
+
+    .dev-content {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .project-content {
+        display: flex;
+        justify-content: center;
+    }
+
+    .dev-text {
+        width: 90%;
+    }
 }
+
+@font-face {
+    font-family: 'Geist';
+    src: url('/assets/fonts/Geist-Regular.woff2') format('woff2'),
+         url('/assets/fonts/Geist-Regular.ttf') format('truetype'),
+         url('/assets/fonts/Geist-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Geist';
+    src: url('/assets/fonts/Geist-Bold.woff2') format('woff2'),
+         url('/assets/fonts/Geist-Bold.ttf') format('truetype'),
+         url('/assets/fonts/Geist-Bold.otf') format('opentype');
+    font-weight: 600; 
+    font-style: normal;
+}
+
+/*
+header {
+    position: fixed;
+    top: 0;
+    width: 80vw; 
+    background-color: white;
+    border: 2px solid;
+    z-index: 1000;
+    border-bottom: 1px solid #ddd;
+    transition: transform 0.3s ease-in-out;
+    padding: 15px 0;
+}
+
+.hidden {
+    transform: translateY(-100%);
+}*/
