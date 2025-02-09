@@ -4,27 +4,112 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/about.css">
+
     <title>Qaiyyum's Portfolio</title>
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="../index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Projects</a>
-            <a href="projects.html">Contact</a>
-        </nav>
-    </header>
-
-    <main>
-        <div></div>
-        <div></div>
-        <div></div>
-    </main>
+    <div id="wrapper">
+        <header>
+            <nav>
+                <a href="../index.html" aria-label="Home">Home</a>
+                <a href="pages/about.html" aria-label="About">About</a>
+                <a href="pages/projects.html" aria-label="Projects">Projects</a>
+                <a href="pages/contact.html" aria-label="Contact">Contact</a>
+            </nav>
+        </header>
     
-    <footer>
+        <main>
+            <!-- About Me Section (Text Left, Image Right) -->
+            <section id="about-me" class="content">
+                <div class="about-container">
+                    <div class="about-text">
+                        <h2>Who Am I?👇🌟</h2>
+                        <p>I’m Muhammad Qaiyyum Bin Kamal, a web developer based in Malaysia 🇲🇾. I started with an art background in high school but found my passion in web development, where creativity meets functionality. While pursuing a Computer Science Diploma at Universiti Putra Malaysia 🎓 (UPM), I also do freelance work to apply my skills in real-world projects. Now, I blend design and code to create clean, user-friendly websites.</p>
+                    </div>
+                    <div class="about-image">
+                        <img src="../assets/img/pfp.jpg" alt="Profile picture of Qaiyyum">
+                    </div>
+                </div>
+            </section>
 
-    </footer>
+            <!-- What I Do Section (Image Left, Text Right) -->
+            <section id="what-i-do" class="content">
+                <div class="about-container">
+                    <div class="about-image">
+                        <img src="../assets/img/test.jpg" alt="Coding illustration">
+                    </div>
+                    <div class="about-text">
+                        <h2>What I Do 💻</h2>
+                        <p>As a web developer, I specialize in front-end development using React, Tailwind CSS, and JavaScript. I also have experience in game development with Unity and data preprocessing for AI. Whether it's building responsive websites, optimizing user experiences, or experimenting with AI-powered applications, I'm always eager to learn and improve.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Education & Goals Section (Text Left, Image Right) -->
+            <section id="education-goals" class="content">
+                <div class="about-container">
+                    <div class="about-text">
+                        <h2>Education & Goals 🎓</h2>
+                        <p>Currently pursuing a Diploma in Computer Science at Universiti Putra Malaysia, I aim to deepen my knowledge in web development, AI, and software engineering. My goal is to contribute to impactful tech projects, secure an internship at a leading tech company, and eventually pursue further studies in AI specialization.</p>
+                    </div>
+                    <div class="about-image">
+                        <img src="../assets/img/test.jpg" alt="Graduation cap illustration">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Beyond Coding Section (Image Left, Text Right) -->
+            <section id="beyond-coding" class="content">
+                <div class="about-container">
+                    <div class="about-image">
+                        <img src="../assets/img/test.jpg" alt="Gaming and art illustration">
+                    </div>
+                    <div class="about-text">
+                        <h2>Beyond Coding 🎨</h2>
+                        <p>Outside of coding, I have a strong background in fine arts, event organizing, and volunteer work. I enjoy designing, exploring new tech trends, and gaming (especially Marvel Rivals & Sekiro). Balancing creativity and logic is what keeps me engaged in both my personal and professional life.</p>
+                    </div>
+                </div>
+            </section>
+
+    
+            <!-- Contact Section -->
+            <section id="contact-section" class="content">
+                <h2>Let's Connect! 🤝</h2>
+                <p>I’m always open to collaborations, freelance opportunities, and tech discussions 💬.</p>
+                <p>Feel free to reach out 📩 if you’d like to work together or just chat about web development 🌍!</p><br>
+                <a id="contact" href="pages/contact.html" aria-label="Contact me">Contact Me</a>
+            </section>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-section">
+            <!-- Social Icons -->
+            <div class="social-icons">
+                <a href="https://github.com/Qaiyyum47" target="_blank" aria-label="GitHub">
+                    <img src="../assets/img/icon/github.png" alt="GitHub">
+                </a>
+                <a href="https://www.linkedin.com/in/qaiyyum-kamal/" target="_blank" aria-label="LinkedIn">
+                    <img src="../assets/img/icon/linkedin.png" alt="LinkedIn">
+                </a>
+                <a href="mailto:qaiyyumkamal047@gmail.com" aria-label="Email">
+                    <img src="../assets/img/icon/gmail.png" alt="Email">
+                </a>
+            </div>
+    
+            <!-- Navigation Links -->
+            <div class="footer-nav">
+                <a href="#landing-section">Home</a>
+                <a href="#about-section">About</a>
+                <a href="#project-section">Projects</a>
+                <a href="#development-section">Development</a>
+                <a href="#contact-section">Contact</a>
+            </div>
+        </div>
+    </footer>  
+
+    <script src="assets/js/script.js"></script>
 </body>
-<script src="assets/js/script.js"></script>
 </html>

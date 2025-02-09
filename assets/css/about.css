@@ -1,0 +1,61 @@
+/* Ensure sections take full screen height and are centered */
+#about-me,
+#what-i-do,  
+#education-goals,  
+#beyond-coding {
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px 0;
+    border-bottom: 1px solid;
+}
+
+#about-me {margin-top: 5%;}
+
+/* Container for each section */
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    width: 90%; /* Ensures content is not too wide */
+    max-width: 1200px; /* Prevents stretching on large screens */
+}
+
+/* Text and image sections */
+.about-text {
+    flex: 2;
+    text-align: left;
+    display: block;
+}
+
+.about-image {
+    flex: 1;
+    display: flex;
+    justify-content: center; /* Centers image horizontally */
+    align-items: center;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 10px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+    }
+
+    .about-text {
+        text-align: left !important; /* Force left alignment */
+        align-items: flex-start !important; /* Remove any centering */
+        display: block; /* Ensure normal block behavior */
+    }
+}
+
