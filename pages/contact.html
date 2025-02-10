@@ -4,27 +4,89 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/styles.css">
-    <title>Qaiyyum's Portfolio</title>
+    <link rel="stylesheet" href="../assets/css/contact.css">
+    <title>Contact - Qaiyyum's Portfolio</title>
 </head>
 <body>
     <header>
         <nav>
-            <a href="../index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Projects</a>
-            <a href="projects.html">Contact</a>
+            <a href="../index.html" aria-label="Home">Home</a>
+            <a href="about.html" aria-label="About">About</a>
+            <a href="projects.html" aria-label="Projects">Projects</a>
+            <a href="contact.html" aria-label="Contact">Contact</a>
         </nav>
     </header>
 
     <main>
-        <div></div>
-        <div></div>
-        <div></div>
+        <section id="contact-section" class="content">
+            <div class="contact-container">
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <p>CONTACT ME</p>
+                    <h2>Get in touch today</h2>
+                    <p>
+                        Whether you have a project in mind, a collaboration idea, or just want to say hello, 
+                        feel free to reach out! I'm always open to discussing new opportunities in web development, 
+                        game design, and AI. Let's create something amazing together!
+                    </p>
+                    <div class="contact-social-links">
+                        <a href="https://github.com/Qaiyyum47" target="_blank" aria-label="GitHub">GitHub</a>
+                        <a href="https://www.linkedin.com/in/qaiyyum-kamal/" target="_blank" aria-label="LinkedIn">LinkedIn</a>
+                        <a href="mailto:qaiyyumkamal047@gmail.com" aria-label="Email">Email</a>
+                    </div>                                                      
+                </div>
+        
+                <!-- Contact Form -->
+                <div class="contact-form">
+                    <h3>Send a Message</h3>
+                    <form action="https://formsubmit.co/qaiyyumkamal047@gmail.com" method="POST" enctype="multipart/form-data">
+                        <input type="hidden" name="_captcha" value="false">
+                    
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required>
+                    
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                    
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    
+                        <label for="phone">Phone Number (Optional)</label>
+                        <input type="tel" id="phone" name="phone">
+                    
+                        <button type="submit">Send</button>
+                    </form>                    
+                </div>
+            </div>
+        </section>
     </main>
-    
-    <footer>
 
+    <footer>
+        <div class="footer-section">
+            <div class="social-icons">
+                <a href="https://github.com/Qaiyyum47" target="_blank" aria-label="GitHub">
+                    <img src="../assets/img/icon/github.png" alt="GitHub">
+                </a>
+                <a href="https://www.linkedin.com/in/qaiyyum-kamal/" target="_blank" aria-label="LinkedIn">
+                    <img src="../assets/img/icon/linkedin.png" alt="LinkedIn">
+                </a>
+                <a href="mailto:qaiyyumkamal047@gmail.com" aria-label="Email">
+                    <img src="../assets/img/icon/gmail.png" alt="Email">
+                </a>
+            </div>
+
+            <div class="footer-nav">
+                <a href="../index.html" aria-label="Home">Home</a>
+                <a href="about.html" aria-label="About">About</a>
+                <a href="projects.html" aria-label="Projects">Projects</a>
+                <a href="contact.html" aria-label="Contact">Contact</a>
+            </div>
+        </div>
     </footer>
+
+    <script src="../assets/js/script.js"></script>
 </body>
-<script src="assets/js/script.js"></script>
 </html>

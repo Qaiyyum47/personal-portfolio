@@ -65,6 +65,10 @@
     gap: 10px;
 }
 
+.project-text ul {
+    padding-left: 10px;
+}
+
 .project-container:nth-child(even) {
     flex-direction: row-reverse; 
 }
