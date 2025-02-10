@@ -184,11 +184,13 @@
 
 .project-box {
     width: 100%;
-    height: 180px;
-    background-color: lightgray;
+    aspect-ratio: 4/3;
+    background-size: cover;
+    background-position: center;
     border-radius: 10px;
     margin-bottom: 15px;
 }
+
 
 #development-section {
     gap: 30px;

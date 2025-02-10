@@ -44,11 +44,11 @@
 
 .project-image img {
     width: 100%;
-    max-width: 400px;
     border-radius: 10px;
-    aspect-ratio: 5/4;
+    aspect-ratio: 4/3;
     object-fit: cover;
     transition: color 0.1s ease-in-out, transform 0.2s ease-in-out;
+    border: 1px solid;
 }
 
 .project-image img:hover {
