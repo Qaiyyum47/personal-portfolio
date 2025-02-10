@@ -75,39 +75,21 @@ a:hover::after {
 header {
     position: fixed;
     top: 0;
-    width: 100%; /* Full screen width */
+    width: 40%;
     z-index: 1000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 15px; /* Keeps padding on top */
+    padding-top: 15px;
 }
 
-/* Full-width blur effect */
-header::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: calc(100%); /* Extends to account for padding */
-    backdrop-filter: blur(15px);
-    background: rgba(255, 255, 255, 0.5); /* Adjust transparency */
-    z-index: -1;
-}
-
-/* Centered nav */
 nav {
+    width: 100%; 
+    background-color: white;
     display: flex;
     justify-content: center;
     gap: 20px;
-    padding: 0px 20px;
-    background-color: white;
+    padding: 0 20px; 
     border: 1px solid;
     border-radius: 10px;
-    z-index: 1;
 }
-
 
 nav a {
     color: black;
