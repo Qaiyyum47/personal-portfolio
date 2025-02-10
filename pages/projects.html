@@ -4,27 +4,185 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/styles.css">
-    <title>Qaiyyum's Portfolio</title>
+    <link rel="stylesheet" href="../assets/css/projects.css">
+    <title>Projects - Qaiyyum's Portfolio</title>
+    <style>
+        .project-text ul {
+            padding-left: 10px;
+        }
+    </style>
 </head>
 <body>
     <header>
         <nav>
-            <a href="../index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Projects</a>
-            <a href="projects.html">Contact</a>
+            <a href="../index.html" aria-label="Home">Home</a>
+            <a href="about.html" aria-label="About">About</a>
+            <a href="projects.html" aria-label="Projects">Projects</a>
+            <a href="contact.html" aria-label="Contact">Contact</a>
         </nav>
     </header>
 
     <main>
-        <div></div>
-        <div></div>
-        <div></div>
-    </main>
-    
-    <footer>
+        <section id="projects-overview" class="content">
+            <h1>My Projects 🚀</h1>
+            <p>Here are some projects I've built in web development, game development, and AI. Each one reflects my passion for creating efficient, user-friendly applications. Feel free to explore the source code!</p>
+        </section>
 
+        <section id="web-projects" class="content">
+            <h2>Web Development 🌐</h2>
+
+            <div class="project-container">
+                <div class="project-image">
+                    <img src="../assets/img/test.jpg" alt="Portfolio Website" onclick="window.open('https://qaiyyum47.github.io/personal-portfolio/', '_blank')">
+                </div>
+                <div class="project-text">
+                    <h3>Personal Portfolio Website</h3>
+                    <p>A fully responsive portfolio website showcasing my projects, skills, and experience. Designed for clean aesthetics, easy navigation, and optimized performance.</p>
+                    <p>Key Features:</p>
+                    <ul>
+                        <li>Fully responsive across all devices</li>
+                        <li>Interactive UI with smooth animations</li>
+                        <li>Optimized for performance and SEO</li>
+                        <li>Built with minimal dependencies</li>
+                    </ul>
+                    <p>Tech Stack: HTML, CSS, JavaScript</p>
+                    <a href="https://github.com/Qaiyyum47/personal-portfolio" target="_blank">View Code</a>
+                </div>
+            </div>
+
+            <div class="project-container reverse">
+                <div class="project-image">
+                    <img src="../assets/img/test.jpg" alt="Megalo Clinic" onclick="window.open('https://www.youtube.com/', '_blank')">
+                </div>
+                <div class="project-text">
+                    <h3>Megalo Clinic Website</h3>
+                    <p>A static website for a fictional clinic, built as a mini-project for SSE2150. Focuses on simplicity, accessibility, and clear UI design.</p>
+                    <p>Key Features:</p>
+                    <ul>
+                        <li>Static web design with clean layout</li>
+                        <li>Basic appointment booking form</li>
+                        <li>Minimalist aesthetic with a professional feel</li>
+                    </ul>
+                    <p>Tech Stack: HTML, CSS, JavaScript</p>
+                    <a href="https://github.com/Qaiyyum47/megalo-clinic" target="_blank">View Code</a>
+                </div>
+            </div>
+            
+            <div class="project-container">
+                <div class="project-image">
+                    <img src="../assets/img/test.jpg" alt="Math Game" onclick="window.open('https://www.youtube.com/', '_blank')">
+                </div>
+                <div class="project-text">
+                    <h3>University War: Math Game</h3>
+                    <p>A React-based math game featuring two mini-games: Calculation Clash and Formula Archery. Designed to test speed and accuracy in solving math problems.</p>
+                    <p>Key Features:</p>
+                    <ul>
+                        <li>Time-based challenges with scoring</li>
+                        <li>Interactive UI with real-time updates</li>
+                        <li>Future multiplayer mode planned</li>
+                    </ul>
+                    <p>Tech Stack: React, Tailwind CSS</p>
+                    <a href="https://github.com/Qaiyyum47/university-war" target="_blank">View Code</a>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="game-projects" class="content">
+            <h2>Game Development 🎮</h2>
+
+            <div class="project-container reverse">
+                <div class="project-image">
+                    <img src="../assets/img/test.jpg" alt="Bubble Parallel" onclick="window.open('https://globalgamejam.org/games/2025/bubble-parallel-3', '_blank')">
+                </div>
+                <div class="project-text">
+                    <h3>Tilemap Switching System</h3>
+                    <p>A custom tilemap switching system for Unity, designed for seamless level transitions in 2D games. Ensures smooth gameplay without performance drops.</p>
+                    <p>Key Features:</p>
+                    <ul>
+                        <li>Dynamic tilemap transitions</li>
+                        <li>Optimized for performance</li>
+                        <li>Supports multiple tile layers</li>
+                        <li>Easy to integrate with existing Unity projects</li>
+                    </ul>
+                    <p>Tech Stack: Unity (C#), Tilemap API</p>
+                    <a href="https://github.com/Qaiyyum47/parallel-game" target="_blank">View Code</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="ai-projects" class="content">
+            <h2>AI & Data Science 🤖</h2>
+
+            <div class="project-container">
+                <div class="project-image">
+                    <img src="../assets/img/test.jpg" alt="Bubble Parallel" onclick="window.open('https://www.youtube.com/', '_blank')">
+                </div>
+                <div class="project-text">
+                    <h3>AI-Powered Study Tracker</h3>
+                    <p>An AI-based study tracking tool that logs study sessions, visualizes productivity trends, and uses ML to suggest better study habits.</p>
+                    <p>Key Features:</p>
+                    <ul>
+                        <li>Tracks study sessions and visualizes progress</li>
+                        <li>Predicts productivity trends using ML</li>
+                        <li>Sentiment analysis for motivation tracking</li>
+                        <li>Customizable dashboard</li>
+                    </ul>
+                    <p>Tech Stack: Python, Pandas, Scikit-learn, Flask</p>
+                    <a href="https://github.com/Qaiyyum47/study-tracker" target="_blank">View Code</a>
+                </div>
+            </div>
+
+            <div class="project-container reverse">
+                <div class="project-image">
+                    <img src="../assets/img/test.jpg" alt="Data Cleaning Project">
+                </div>
+                <div class="project-text">
+                    <h3>Malaysian Condominium Data Cleaning</h3>
+                    <p>A data preprocessing project where I cleaned and structured a dataset of Malaysian condominium listings, addressing missing values, inconsistencies, and outliers.</p>
+                    <p>Key Features:</p>
+                    <ul>
+                        <li>Handled missing values and inconsistent data types</li>
+                        <li>Performed one-hot encoding for categorical data</li>
+                        <li>Extracted city and state details for better analysis</li>
+                        <li>Saved cleaned dataset for further ML tasks</li>
+                    </ul>
+                    <p>Tech Stack: Python, Pandas, Scikit-learn</p>
+                    <a href="https://github.com/Qaiyyum47/malaysia-condo-data" target="_blank">View Code</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact-section" class="content">
+            <h2>Let's Connect! 🤝</h2>
+            <p>I’m always open to collaborations, freelance opportunities, and tech discussions 💬.</p>
+            <a id="contact" href="contact.html" aria-label="Contact me">Contact Me</a>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-section">
+            <div class="social-icons">
+                <a href="https://github.com/Qaiyyum47" target="_blank" aria-label="GitHub">
+                    <img src="../assets/img/icon/github.png" alt="GitHub">
+                </a>
+                <a href="https://www.linkedin.com/in/qaiyyum-kamal/" target="_blank" aria-label="LinkedIn">
+                    <img src="../assets/img/icon/linkedin.png" alt="LinkedIn">
+                </a>
+                <a href="mailto:qaiyyumkamal047@gmail.com" aria-label="Email">
+                    <img src="../assets/img/icon/gmail.png" alt="Email">
+                </a>
+            </div>
+
+            <div class="footer-nav">
+                <a href="../index.html" aria-label="Home">Home</a>
+                <a href="about.html" aria-label="About">About</a>
+                <a href="projects.html" aria-label="Projects">Projects</a>
+                <a href="contact.html" aria-label="Contact">Contact</a>
+            </div>
+        </div>
     </footer>
+
+    <script src="../assets/js/script.js"></script>
 </body>
-<script src="assets/js/script.js"></script>
 </html>

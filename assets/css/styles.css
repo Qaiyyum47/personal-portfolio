@@ -47,8 +47,8 @@ a {
     position: relative;
     text-decoration: none;
     color: grey;
-    transition: color 0.3s ease-in-out;
-    display: inline-block; 
+    transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
+    display: inline-block;
     width: fit-content;
 }
 
@@ -56,38 +56,58 @@ a::after {
     content: "";
     position: absolute;
     left: 0;
-    bottom: -2px; 
+    bottom: -2px;
     width: 0;
-    height: 2px; 
-    color: black;
+    height: 2px;
     background-color: black;
     transition: width 0.3s ease-in-out;
 }
 
+a:hover {
+    transform: translateY(-3px); /* Moves the link up slightly */
+}
+
 a:hover::after {
-    width: 100%; 
+    width: 100%;
 }
 
 /* Header */
 header {
     position: fixed;
     top: 0;
-    width: 40%;
-    backdrop-filter: blur(15px);
+    width: 100%; /* Full screen width */
     z-index: 1000;
-    padding-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15px; /* Keeps padding on top */
 }
 
+/* Full-width blur effect */
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100%); /* Extends to account for padding */
+    backdrop-filter: blur(15px);
+    background: rgba(255, 255, 255, 0.5); /* Adjust transparency */
+    z-index: -1;
+}
+
+/* Centered nav */
 nav {
-    width: 100%; 
-    background-color: white;
     display: flex;
     justify-content: center;
     gap: 20px;
-    padding: 0 20px; 
+    padding: 0px 20px;
+    background-color: white;
     border: 1px solid;
     border-radius: 10px;
+    z-index: 1;
 }
+
 
 nav a {
     color: black;

@@ -1,0 +1,88 @@
+#web-projects,
+#ai-projects,
+#game-projects {
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px 0;
+    border-bottom: 1px solid;
+    border-top: 1px solid;
+}
+
+#projects-overview {
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 50vw;
+    padding: 50px 0;
+    gap: 15px;
+}
+
+/* Container for each project */
+.project-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px 0;
+}
+
+/* Image section */
+.project-image {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project-image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    aspect-ratio: 5/4;
+    object-fit: cover;
+    transition: color 0.1s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.project-image img:hover {
+    filter: brightness(80%);
+    transform: translateY(-10px);
+}
+
+.project-text {
+    flex: 2;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.project-container:nth-child(even) {
+    flex-direction: row-reverse; 
+}
+
+@media (max-width: 768px) {
+    .project-container {
+        flex-direction: column !important;
+    }
+
+    #projects-overview {
+        width: 100%;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .project-text {
+        text-align: left !important;
+        align-items: flex-start !important; 
+        display: block; 
+    }
+}
