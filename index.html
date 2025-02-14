@@ -8,153 +8,100 @@
     <title>Qaiyyum's Portfolio</title>
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="index.html" aria-label="Home">Home</a>
-            <a href="pages/about.html" aria-label="About">About</a>
-            <a href="pages/projects.html" aria-label="Projects">Projects</a>
-            <a href="pages/contact.html" aria-label="Contact">Contact</a>
-        </nav>
-    </header>
+    <header></header>
 
     <main>
-        <!-- Landing Section -->
-        <section id="landing-section" class="content">
-            <div id="main-text">
-                <h1>👋 Hi, I'm Qaiyyum!</h1>
-                <h1>A frontend developer</h1>
-                <p>I build clean, responsive websites that deliver seamless user experiences and bring your ideas to life.</p>
+        <!-- Hero Section -->
+        <section id="hero" class="section">
+            <h1>Portfolio: Qaiyyum Kamal</h1>
+            <div class="hero-content">
+                <h3>Crafting Digital Experiences That Inspire</h3>
+                <p>Hello! I'm Qaiyyum, a Computer Science student with a deep passion for technology, exploring the intersection of web development and AI. I strive to create the simplest UX for a sustainable future.</p>
             </div>
-            <a href="pages/projects.html" aria-label="Check my work">Check my work →</a>
+            <a href="pages/projects.html" id="hero-btn" class="btn" aria-label="Check my work">Check my work →</a>
         </section>
 
         <!-- About Section -->
-        <section id="about-section" class="content">
-            <div class="about-img">
-                <div class="about-1">
-                    <h2>About me👇🌟</h2>
-                    <p>I’m Muhammad Qaiyyum Bin Kamal, a web developer based in Malaysia 🇲🇾. I started with an art background in high school but found my passion 
-                        in web development, where creativity meets functionality. While pursuing a Computer Science Diploma at Universiti Putra Malaysia 🎓 (UPM), 
-                        I also do freelance work to apply my skills in real-world projects. Now, I blend design and code to create clean, user-friendly websites.</p>
-                    <a href="pages/about.html" aria-label="Learn more about me">Learn More →</a>
+        <section id="about" class="section">
+            <div class="about-container">
+                <div class="about-text">
+                    <h2>From Art to Code</h2>
+                    <p>I'm Muhammad Qaiyyum Bin Kamal, a Computer Science student from Malaysia 🇲🇾. I started with an art background but  I shifted to technology, drawn by its dynamic nature. Currently, I'm pursuing a Computer Science Diploma at Universiti Putra Malaysia (UPM) 🎓. Alongside my studies, I work on side projects and take online courses to deepen my technical skills. I aspire to innovate and build solutions that make a real impact on the world</p>
+                    <a href="pages/about.html" id="about-btn"class="btn" aria-label="Learn more about me">Learn More →</a>
                 </div>
-                <div class="about-2">
-                    <img id="pfp" src="assets/img/profile-pic.png" alt="Profile picture of Qaiyyum">
-                </div>
-            </div>
-
-            <h2>Technologies I Use</h2>
-            <div class="tech-logo">
-                <div class="tech-item" data-alt="HTML">
-                    <img src="assets/img/icon/html.png" alt="HTML logo">
-                </div>
-                <div class="tech-item" data-alt="CSS">
-                    <img src="assets/img/icon/css.png" alt="CSS logo">
-                </div>
-                <div class="tech-item" data-alt="JavaScript">
-                    <img src="assets/img/icon/javascript.png" alt="JavaScript logo">
-                </div>
-                <div class="tech-item" data-alt="React">
-                    <img src="assets/img/icon/react.png" alt="React logo">
-                </div>
-                <div class="tech-item" data-alt="Git">
-                    <img src="assets/img/icon/git.png" alt="Git logo">
-                </div>
-                <div class="tech-item" data-alt="VS Code">
-                    <img src="assets/img/icon/vscode.png" alt="VS Code logo">
-                </div>
-                <div class="tech-item" data-alt="Figma">
-                    <img src="assets/img/icon/figma.png" alt="Figma logo">
+                <div class="about-image">
+                    <img id="profile-pic" src="assets/img/profile-pic.png" alt="Profile picture of Qaiyyum">
                 </div>
             </div>
         </section>
 
-        <!-- Project Section -->
-        <section id="project-section" class="content">
-            <h2>🚀 Some of My Work</h2>
-            <div class="project-content">
+        <!-- Technologies & Tools Section-->
+         <section id="tech" class="section">
+            <h2 id="tech-head">Technologies I Use</h2>
+            <div class="stack-grid">
+                <div class="stack-card">
+                    <h3>Languages</h3>
+                    <div class="stack-icon">
+                        <img src="assets/img/icon/html.png" alt="HTML">
+                        <img src="assets/img/icon/css.png" alt="CSS">
+                        <img src="assets/img/icon/js.png" alt="JavaScript">
+                        <img src="assets/img/icon/python.png" alt="Python">
+                        <img src="assets/img/icon/java.png" alt="Java">
+                    </div>
+                </div>
+            
+                <div class="stack-card">
+                    <h3>Tools</h3>
+                    <div class="stack-icon">
+                        <img src="assets/img/icon/vscode.png" alt="VS Code">
+                        <img src="assets/img/icon/git.png" alt="Git">
+                        <img src="assets/img/icon/github.png" alt="GitHub">
+                        <img src="assets/img/icon/figma.png" alt="Figma">
+                    </div>
+                </div>
+            
+                <div class="stack-card">
+                    <h3>Frameworks & Libraries</h3>
+                    <div class="stack-icon">
+                        <img src="assets/img/icon/react.png" alt="React">
+                        <img src="assets/img/icon/tailwind.png" alt="Tailwind CSS">
+                        <img src="assets/img/icon/nodejs.png" alt="Node.js">
+                    </div>
+                </div>
+            </div>            
+         </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <h2>My Projects</h2>
+            <div class="project-grid">
                 <div class="project-card">
-                    <div class="project-box" style="background-image: url('assets/img/test.jpg');"></div>
-                    <h3>React Math Game 🧮</h3>
+                    <div class="project-thumbnail" style="background-image: url('assets/img/test.jpg');"></div>
+                    <h3>Equation Quest Math Website</h3>
                     <p>A fun math game built with React that helps users practice calculations interactively.</p>
-                    <a href="/pages/projects.html" aria-label="Learn more about React Math Game">Learn More →</a>
+                    <a href="/pages/projects.html" class="btn" aria-label="Learn more about React Math Game">Learn More →</a>
                 </div>
                 <div class="project-card">
-                    <div class="project-box" style="background-image: url('assets/img/megalo-vet.png');"></div>
-                    <h3>Vet Clinic Website 🏥</h3>
+                    <div class="project-thumbnail" style="background-image: url('assets/img/megalo-vet.png');"></div>
+                    <h3>Megalo Animal Clinic Website</h3>
                     <p>A clean, responsive website for Pawsible Veterinary Clinic, built with HTML, CSS, and JavaScript.</p>
-                    <a href="/pages/projects.html" aria-label="Learn more about Vet Clinic Website">Learn More →</a>
+                    <a href="/pages/projects.html" class="btn" aria-label="Learn more about Vet Clinic Website">Learn More →</a>
                 </div>
                 <div class="project-card">
-                    <div class="project-box" style="background-image: url('assets/img/parallel-bubble.png');"></div>
-                    <h3>Bubble Parallel 🫧</h3>
+                    <div class="project-thumbnail" style="background-image: url('assets/img/parallel-bubble.png');"></div>
+                    <h3>Bubble Parallel GGJ2025</h3>
                     <p>A physics-based platformer where you navigate through two parallel worlds as a fragile bubble.</p>
-                    <a href="/pages/projects.html" aria-label="Learn more about AI Study Tracker">Learn More →</a>
+                    <a href="/pages/projects.html" class="btn" aria-label="Learn more about AI Study Tracker">Learn More →</a>
                 </div>
             </div>
         </section>
-
-        <!-- Development Section -->
-        <section id="development-section" class="content">
-            <div class="dev-text">
-                <p>🚀 DEVELOPMENT PROCESS</p>
-                <h2>Get started as easy as 1️⃣, 2️⃣, 3️⃣</h2>
-                <p>Building projects efficiently with a structured workflow—plan, develop, and refine to ensure a seamless user experience.</p>
-            </div>
-            <div class="dev-content">
-                <div class="dev-card">
-                    <img src="assets/img/icon/clipboard.png" alt="Planning Icon" class="dev-icon">
-                    <h3>📋 Planning & Strategy</h3>
-                    <p>Before writing a single line of code, I create a clear roadmap to ensure efficiency and user satisfaction.</p>
-                </div>
-                <div class="dev-card">
-                    <img src="assets/img/icon/code.png" alt="Code Icon" class="dev-icon">
-                    <h3>💻 Development & Update</h3>
-                    <p>I write clean, maintainable code while ensuring smooth performance and adaptability for future improvements.</p>
-                </div>
-                <div class="dev-card">
-                    <img src="assets/img/icon/shuttle.png" alt="Launch Icon" class="dev-icon">
-                    <h3>🚀 Testing & Launch</h3>
-                    <p>I rigorously test for responsiveness, speed, and security before launching a polished final product.</p>
-                </div>
-            </div>
-        </section>
-
 
         <!-- Contact Section -->
-        <section id="contact-section" class="content">
-            <h2>Let's Connect! 🤝</h2>
-            <p>I’m always open to collaborations, freelance opportunities, and tech discussions 💬.</p>
-            <p>Feel free to reach out 📩 if you’d like to work together or just chat about web development 🌍!</p><br>
-            <a id="contact" href="pages/contact.html" aria-label="Contact me">Contact Me</a>
+        <section id="contact" class="section">  
         </section>
     </main>
 
-    <!-- Footer -->
-    <footer>
-        <div class="footer-section">
-            <!-- Social Icons -->
-            <div class="social-icons">
-                <a href="https://github.com/Qaiyyum47" target="_blank" aria-label="GitHub">
-                    <img src="assets/img/icon/github.png" alt="GitHub">
-                </a>
-                <a href="https://www.linkedin.com/in/qaiyyum-kamal/" target="_blank" aria-label="LinkedIn">
-                    <img src="assets/img/icon/linkedin.png" alt="LinkedIn">
-                </a>
-                <a href="mailto:qaiyyumkamal047@gmail.com" aria-label="Email">
-                    <img src="assets/img/icon/gmail.png" alt="Email">
-                </a>
-            </div>
-
-            <!-- Navigation Links -->
-            <div class="footer-nav">
-                <a href="#landing-section">Home</a>
-                <a href="#about-section">About</a>
-                <a href="#project-section">Projects</a>
-                <a href="#contact-section">Contact</a>
-            </div>
-        </div>
-    </footer>
+    <footer></footer>
 
     <script src="assets/js/script.js"></script>
 </body>

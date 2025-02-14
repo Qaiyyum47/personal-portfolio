@@ -1,92 +1,88 @@
-#web-projects,
-#ai-projects,
-#game-projects {
-    min-height: 70vh;
+.projects-content {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     text-align: center;
-    padding: 50px 0;
-    border-bottom: 1px solid;
-    border-top: 1px solid;
-}
-
-#projects-overview {
-    min-height: 70vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    max-width: 50vw;
-    padding: 50px 0;
     gap: 15px;
 }
 
-/* Container for each project */
-.project-container {
+.projects-container {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 30px;
     width: 90%;
-    max-width: 1200px;
-    margin: 40px 0;
-}
-
-/* Image section */
-.project-image {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.project-image img {
-    width: 100%;
-    border-radius: 10px;
-    aspect-ratio: 4/3;
-    object-fit: cover;
-    transition: color 0.1s ease-in-out, transform 0.2s ease-in-out;
-    border: 1px solid;
-}
-
-.project-image img:hover {
-    filter: brightness(80%);
-    transform: translateY(-10px);
+    flex-wrap: wrap;
 }
 
 .project-text {
-    flex: 2;
+    flex: 1;
     text-align: left;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    gap: 10px;
+    justify-content: center;
+    gap: 20px;
 }
 
-.project-text ul {
-    padding-left: 10px;
+/* project Image Container */
+.project-image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 250px;
+    max-width: 500px;
 }
 
-.project-container:nth-child(even) {
-    flex-direction: row-reverse; 
+.project-image-container img {
+    width: 100%;
+    aspect-ratio: 16/9; /* Desktop aspect ratio */
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
 }
 
-@media (max-width: 768px) {
-    .project-container {
-        flex-direction: column !important;
-    }
-
-    #projects-overview {
-        width: 100%;
-        text-align: center;
-        gap: 10px;
-    }
-
-    .project-text {
-        text-align: left !important;
-        align-items: flex-start !important; 
-        display: block; 
-    }
+.project-image-container img:hover {
+    transform: scale(1.5); 
 }
+.accordion-header {
+    display: flex;
+    justify-content: space-between; /* Ensures text and arrow are properly spaced */
+    align-items: center;
+    width: inherit;
+    padding: 50px 15px;
+    background: #f5f5f5;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
+    margin: 0 auto; /* Centers the accordion if needed */
+    box-sizing: border-box; /* Ensures padding doesn't increase width */
+}
+
+.accordion-header:hover {
+    transform: scale(1.1);
+}
+
+.accordion-toggle {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, padding 0.4s ease;
+    padding: 0 15px;
+}
+
+.accordion-header.active .accordion-toggle {
+    transform: rotate(180deg);
+}
+
+.accordion-header.active + .accordion-content {
+    max-height: 500px;
+    padding: 10px 15px;
+}
+

@@ -1,4 +1,3 @@
-/* Global Reset */
 * {
     margin: 0;
     padding: 0;
@@ -6,89 +5,97 @@
     text-decoration: none;
 }
 
-/* Base Styles */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
 body {
-    margin: auto;
     padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: 'Geist', Arial, Helvetica, sans-serif;
+    font-family: 'SatoshiMedium', Arial, Helvetica, sans-serif;
     font-size: 18px;
-    line-height: 1.5;
     min-height: 100vh;
-    width: 100%; /* Ensure full-width */
+    width: 100%;
 }
 
-/* Typography */
-h1, h2, h3 {
-    font-family: 'Geist', sans-serif;
-}
-
-h1 {
-    font-size: 2.5rem;
-    font-weight: 600;
-}
-
-h2 {
-    font-size: 2rem;
-}
-
-h3 {
-    font-size: 1.5rem;
-}
-
-p, a {
-    font-size: 1.2rem;
-}
-
-/* Links */
 a {
     position: relative;
     text-decoration: none;
-    color: grey;
+    color: black;
     transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
     display: inline-block;
     width: fit-content;
 }
 
-a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -2px;
-    width: 0;
-    height: 2px;
-    background-color: black;
-    transition: width 0.3s ease-in-out;
-}
-
 a:hover {
-    transform: translateY(-3px); /* Moves the link up slightly */
+    transform: translateY(-3px);
 }
 
-a:hover::after {
-    width: 100%;
+h1 {
+    font-family: 'SatoshiBold', sans-serif;
+    font-size: 6rem;
 }
 
-/* Header */
+h2 {
+    font-family: 'SatoshiBold', sans-serif;
+    font-size: 4rem;
+}
+
+h3 {
+    font-family: 'SatoshiMedium', sans-serif;
+    font-size: 2rem;
+}
+
+p, a {
+    font-size: 1.25rem;
+}
+
+input, textarea, select {
+    font-family: 'SatoshiMedium', sans-serif;
+}
+
+@font-face {
+    font-family: 'SatoshiBold';
+    src: url('../fonts/Satoshi-Bold.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SatoshiMedium';
+    src: url('../fonts/Satoshi-Medium.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 header {
     position: fixed;
     top: 0;
-    width: 40%;
+    width: 50vw;
     z-index: 1000;
     padding-top: 15px;
+    transition: transform 0.3s ease-in-out;
 }
 
+/*.hidden {
+    transform: translateY(-100%);
+}*/
+
 nav {
-    width: 100%; 
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 0 20px; 
+    background-color: rgba(255, 255, 255, 0.7); 
+    gap: 0px;
+    padding: 5px 20px;
     border: 1px solid;
     border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
 }
 
 nav a {
@@ -97,69 +104,45 @@ nav a {
     padding: 10px 15px;
 }
 
-/* Sections */
-section {
-    min-height: 95vh;
+
+.section {
+    width: 80vw;
+    min-height: 90vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     padding: 50px 0;
+    border-bottom: 1px solid;
+    border-top: 1px solid;
 }
 
-.content {
-    flex-grow: 2;
-    padding: 20px;
-    min-height: 400px;
-    width: 100%;
-    max-width: 1200px;
-    margin: auto;
-}
-
-
-#contact-section {
-    min-height: 70vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin-bottom: 5%;
-}
-
-#contact-section a {
+.btn {
     text-decoration: none;
     color: black;
     background-color: lightgray;
     padding: 12px;
     border-radius: 10px;
-    margin-top: 20px;
     display: inline-block;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
-#contact-section a::after {
+.btn a::after {
     display: none;
 }
 
-#contact-section a:hover {
+.btn a:hover {
     color: white;
     background-color: gray;
     transform: translateY(-5px);
     box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
 }
 
-#contact {
-    text-decoration: none;
-    color: white;
-    background-color: gray;
-    padding: 12px;
-    border-radius: 10px;
-    margin-top: 30px;
+img {
+    border-radius: 15px;
 }
-
 
 footer {
     width: 100%;
@@ -211,130 +194,3 @@ footer {
 .footer-nav a:hover {
     color: black;
 }
-
-/* Media Query for Small Screens */
-@media (max-width: 768px) {
-    body {
-        width: 90%;
-    }
-
-    h1 {
-        font-size: 2rem;
-    }
-
-    h2 {
-        font-size: 1.8rem;
-    }
-
-    p, a {
-        font-size: 1rem;
-    }
-
-    header {
-        width: 80%;
-    }
-
-    nav {
-        gap: 0;
-    }
-
-    footer-nav {
-        gap: 0;
-    }
-
-    #main-text {
-        max-width: 80vw;
-        font-size: 1rem; /* Decrease font size for readability */
-        line-height: 1.4; /* Adjust line spacing */
-    }
-
-    h1 {
-        font-size: 2rem;
-    }
-
-    h2 {
-        font-size: 1.8rem;
-    }
-
-    p, a {
-        font-size: 1rem;
-    }
-
-    .about-img {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .tech-logo {
-        justify-content: center;
-    }
-
-    .dev-content {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px;
-    }
-
-    .project-content {
-        display: flex;
-        justify-content: center;
-    }
-
-    .dev-text {
-        width: 90%;
-    }
-}
-
-@font-face {
-    font-family: 'Geist';
-    src: url('/assets/fonts/Geist-Regular.woff2') format('woff2'),
-         url('/assets/fonts/Geist-Regular.ttf') format('truetype'),
-         url('/assets/fonts/Geist-Regular.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Geist';
-    src: url('/assets/fonts/Geist-Bold.woff2') format('woff2'),
-         url('/assets/fonts/Geist-Bold.ttf') format('truetype'),
-         url('/assets/fonts/Geist-Bold.otf') format('opentype');
-    font-weight: 600; 
-    font-style: normal;
-}
-
-/* Fonts */
-@font-face {
-    font-family: 'Geist';
-    src: url('/assets/fonts/Geist-Regular.woff2') format('woff2'),
-         url('/assets/fonts/Geist-Regular.ttf') format('truetype'),
-         url('/assets/fonts/Geist-Regular.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Geist';
-    src: url('/assets/fonts/Geist-Bold.woff2') format('woff2'),
-         url('/assets/fonts/Geist-Bold.ttf') format('truetype'),
-         url('/assets/fonts/Geist-Bold.otf') format('opentype');
-    font-weight: 600; 
-    font-style: normal;
-}
-
-/*
-header {
-    position: fixed;
-    top: 0;
-    width: 80vw; 
-    background-color: white;
-    border: 2px solid;
-    z-index: 1000;
-    border-bottom: 1px solid #ddd;
-    transition: transform 0.3s ease-in-out;
-    padding: 15px 0;
-}
-
-.hidden {
-    transform: translateY(-100%);
-}*/
