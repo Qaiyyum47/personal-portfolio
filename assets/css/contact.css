@@ -28,6 +28,12 @@
     gap: 20px;
 }
 
+.contact-social-links img {
+    height: 40px;
+    width: 40px;
+
+}
+
 .contact-form {
     flex: 1;
     min-width: 300px;

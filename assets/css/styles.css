@@ -21,6 +21,7 @@ body {
     font-size: 18px;
     min-height: 100vh;
     width: 100%;
+    
 }
 
 a {
@@ -76,10 +77,14 @@ input, textarea, select {
 header {
     position: fixed;
     top: 0;
-    width: 50vw;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60vw;
     z-index: 1000;
     padding-top: 15px;
     transition: transform 0.3s ease-in-out;
+    display: flex; 
+    justify-content: center; 
 }
 
 /*.hidden {
@@ -87,6 +92,7 @@ header {
 }*/
 
 nav {
+    width: inherit;
     background-color: rgba(255, 255, 255, 0.7); 
     gap: 0px;
     padding: 5px 20px;
@@ -106,16 +112,23 @@ nav a {
 
 
 .section {
-    width: 80vw;
-    min-height: 90vh;
+    width: 75vw;
+    min-height: 85vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     padding: 50px 0;
-    border-bottom: 1px solid;
-    border-top: 1px solid;
+}
+
+.contact-s-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    width: 80%;
 }
 
 .btn {
@@ -127,6 +140,7 @@ nav a {
     display: inline-block;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    margin-top: 40px;
 }
 
 .btn a::after {
@@ -145,21 +159,35 @@ img {
 }
 
 footer {
-    width: 100%;
     background-color: lightgray;
-    padding: 20px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;    
+    border-radius: 24px 25px 0 0; /* Top-left and top-right rounded, bottom corners sharp */
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    width: inherit;
 }
 
-.footer-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
+.footer-links {
+    margin: auto 0;
 }
+
+.footer-links a {
+    display: inline-block;
+    margin: 0 10px;
+    transition: 0.3s;
+}
+
+.footer-links img {
+    width: 24px;
+    height: 24px;
+    border-radius: 0px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.footer-links a:hover img {
+    transform: scale(1.2);
+}
+
 
 .social-icons {
     width: 80%;
@@ -171,6 +199,10 @@ footer {
     width: 30px;
     height: auto;
     transition: transform 0.2s ease-in-out;
+}
+
+.icon-container img {
+    border-radius: 0px;
 }
 
 .social-icons a:hover img {
@@ -194,3 +226,81 @@ footer {
 .footer-nav a:hover {
     color: black;
 }
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 4rem;
+    }
+
+    h2 {
+        font-size: 3rem;
+    }
+
+    h3 {
+        font-size: 1.75rem;
+    }
+
+    p, a {
+        font-size: 1.1rem;
+    }
+
+    .section {
+        width: 90vw;
+        padding: 30px 0;
+        min-height: 90vh;
+    }
+
+    header {
+        width: 80vw;
+}
+
+    .btn {
+        padding: 10px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    p, a {
+        font-size: 1rem;
+    }
+
+    .section {
+        width: 95vw;
+        padding: 20px 0;
+        min-height: 95vh;
+    }
+
+    header {
+        width: 80vw;
+    }
+
+    .btn {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+
+    .social-icons {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .footer-nav {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
