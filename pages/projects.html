@@ -11,17 +11,15 @@
     <header></header>
 
     <main>
-        <section id="projects-overview" class="section">
-            <div class="projects-content">
-                <h1>Turning Ideas into Reality with Code</h1>
-                <p>
-                    Here are some projects I've worked on in web development, game development, and AI. 
-                    Each one showcases my approach to problem-solving, data-driven thinking, and building efficient solutions.
-                </p>
+        <!-- Hero Section -->
+        <section id="hero">
+            <div class="hero-content">
+                <h1>Projects</h1>
+                <h3>Bringing ideas to life.</h3>
             </div>
         </section>
 
-        <section id="projects-list" class="section">
+        <section id="projects-list">
             <!-- Web Development -->
             <div class="accordion-header">
                 <h3>Web Development 🌐</h3>
@@ -30,30 +28,51 @@
             <div class="accordion-content">
                 <section id="megalo-clinic" class="section">
                     <div class="projects-container">
-                        <div class="project-text">
-                            <h2>Megalo Clinic Website</h2>
-                            <p>A website built for a fictional vet clinic as part of my SSE2150 mini-project...</p>
-                            <p><strong>Tech Stack:</strong> HTML, CSS, JavaScript</p>
-                            <a href="https://github.com/Qaiyyum47/megalo-vet-clinic" target="_blank">View Code</a>
+                        <div class="project-title">
+                            <h1>01</h1>
+                            <h2>Megalo Animal Clinic Website</h2>
                         </div>
-                        <div class="project-image-container">
-                            <img src="../assets/img/megalo-vet.png" alt="Megalo Clinic" class="project-image" loading="lazy" onclick="window.open('https://qaiyyum47.github.io/megalo-vet-clinic/', '_blank')">
+                        <div class="project-image" onclick="window.open('https://qaiyyum47.github.io/megalo-vet-clinic/', '_blank')">
+                            <img src="../assets/img/megalo-vet.png" alt="Megalo Clinic" class="project-image" loading="lazy">
                         </div>
                     </div>
+                    <div class="project-text">
+                        <p>I led the development of the <strong>Megalo Empire Clinic’s first official website</strong> as part of my SSE2150 course project, where we worked with a real client to solve their business problem. The website enhances the clinic’s online presence, making essential information more accessible while improving patient interaction.</p>
+                        <ul>
+                            <li>Built with <strong>plain HTML, CSS, and JavaScript</strong> for a lightweight and maintainable codebase.</li>
+                            <li>Integrated the <strong>WhatsApp API</strong> for seamless appointment booking.</li>
+                            <li>Utilizes <strong>Google Sheets</strong> for real-time content updates.</li>
+                            <li>Optimized for <strong>SEO and accessibility</strong> to enhance visibility and user experience.</li>
+                        </ul>
+                        <p><strong>Tech Stack:</strong> HTML, CSS, JavaScript, Google Sheets API, WhatsApp API</p>
+                        <a class="project-btn" href="https://github.com/Qaiyyum47/megalo-vet-clinic" target="_blank">View Code</a>
+                    </div>
+                    
+                                      
                 </section>
 
                 <section id="university-war" class="section">
                     <div class="projects-container">
-                        <div class="project-text">
-                            <h2>University War: Math Game</h2>
-                            <p>A React-based math game featuring two mini-games...</p>
-                            <p><strong>Tech Stack:</strong> React, Tailwind CSS</p>
-                            <a href="https://github.com/Qaiyyum47/university-war" target="_blank">View Code</a>
+                        <div class="project-title">
+                            <h1>02</h1>
+                            <h2>Equation Quest Website</h2>
                         </div>
-                        <div class="project-image-container">
+                        <div class="project-image no">
                             <img src="../assets/img/test.jpg" alt="Math Game" class="project-image" loading="lazy">
                         </div>
                     </div>
+                    <div class="project-text">
+                        <p>A solo side project inspired by the famous show <a href="https://en.wikipedia.org/wiki/Elite_League_(TV_series)" class="underline"><strong>University War</strong></a>. It challenges players to enhance their arithmetic and problem-solving skills through engaging gameplay. The game currently features two modes: Calculation Clash and Formula Archery, with plans for multiplayer integration in future updates.</p>
+                        <ul>
+                            <li>Built using <strong>React</strong> for a dynamic and interactive gaming experience.</li>
+                            <li>Features <strong>Calculation Clash</strong>, a speed-based arithmetic challenge, and <strong>Formula Archery</strong>, a strategic formula-building game.</li>
+                            <li>Future updates will introduce <strong>multiplayer mode</strong> and AI opponents.</li>
+                            <li>Designed for <strong>scalability</strong>, with leaderboards, progress tracking, and UI/UX improvements planned.</li>
+                        </ul>
+                        <p><strong>Tech Stack:</strong> React, JavaScript, HTML, CSS</p>
+                        <a class="project-btn" href="https://github.com/Qaiyyum47/equation-quest" target="_blank">View Code</a>
+                    </div>
+                    
                 </section>
             </div>
 
@@ -65,16 +84,25 @@
             <div class="accordion-content">
                 <section id="bubble-parallel" class="section">
                     <div class="projects-container">
-                        <div class="project-text">
+                        <div class="project-title">
+                            <h1>01</h1>
                             <h2>Bubble Parallel</h2>
-                            <p>A physics-based platformer created during Global Game Jam Malaysia 2025.</p>
-                            <p><strong>Tech Stack:</strong> Unity (C#)</p>
-                            <a href="https://github.com/Qaiyyum47/parallel-game" target="_blank">View Code</a>
                         </div>
-                        <div class="project-image-container">
-                            <img src="../assets/img/parallel-bubble.png" alt="Bubble Parallel" class="project-image" loading="lazy" onclick="window.open('https://globalgamejam.org/games/2025/bubble-parallel-3', '_blank')">
+                        <div class="project-image" onclick="window.open('https://globalgamejam.org/games/2025/bubble-parallel-3', '_blank')">
+                            <img src="../assets/img/parallel-bubble.png" alt="Bubble Parallel" class="project-image" loading="lazy">
                         </div>
                     </div>
+                    <div class="project-text">
+                        <p>A physics-based platformer developed during <strong>Global Game Jam Malaysia 2025</strong>. Created within a tight 48-hour deadline, the game explores unique tilemap-switching mechanics with smooth transitions, challenging players to navigate parallel worlds.</p>
+                        <ul>
+                            <li>Developed using <strong>Unity (C#)</strong> with a focus on <strong>tilemap switching and physics interactions</strong>.</li>
+                            <li>Showcases <strong>seamless world transitions</strong> for engaging and dynamic gameplay.</li>
+                            <li>Built using <strong>version-controlled Git</strong>, enhancing collaboration and iteration during the jam.</li>
+                            <li>Designed with <strong>scalability in mind</strong>, allowing future expansions and refinements.</li>
+                        </ul>
+                        <p>Tech Stack:</strong> Unity (C#), Git, GitHub</p>
+                        <a class="project-btn" href="https://github.com/Qaiyyum47/parallel-game" target="_blank">View Code</a>
+                    </div>                    
                 </section>
             </div>
 
@@ -86,26 +114,34 @@
             <div class="accordion-content">
                 <section id="study-tracker" class="section">
                     <div class="projects-container">
-                        <div class="project-text">
+                        <div class="project-title">
+                            <h1>01</h1>
                             <h2>AI-Powered Study Tracker</h2>
-                            <p>An AI-based study tracking tool that logs study sessions...</p>
-                            <p><strong>Tech Stack:</strong> Python, Pandas, Scikit-learn, Flask</p>
-                            <a href="https://github.com/Qaiyyum47/study-tracker" target="_blank">View Code</a>
                         </div>
-                        <div class="project-image-container">
+                        <div class="project-image no">
                             <img src="../assets/img/test.jpg" alt="Study Tracker" class="project-image" loading="lazy">
                         </div>
                     </div>
+                    <div class="project-text">
+                        <p>A future project aimed at helping individuals optimize their study habits through AI and machine learning. This self-tracking system will analyze study patterns and provide data-driven insights for habit improvement.</p>
+                        <ul>
+                            <li>Utilizes <strong>AI and ML</strong> for pattern recognition in study hours.</li>
+                            <li>Employs <strong>classification models</strong> to identify optimal study strategies.</li>
+                            <li>Integrates <strong>data visualization</strong> for progress tracking.</li>
+                            <li>Designed for <strong>personalized habit optimization</strong>.</li>
+                        </ul>
+                        <p>Status:</strong> In planning phase</p>
+                    </div>                    
                 </section>
             </div>
         </section>
+
         <!-- Contact Section -->
-        <section id="contact" class="section">  
+        <section id="contact">  
         </section>
     </main>
 
     <footer></footer>
-    <p>Designed & Built by Qaiyyum Kamal</p>
 
     <script src="../assets/js/script.js"></script>
 </body>

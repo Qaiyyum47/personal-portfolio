@@ -22,18 +22,6 @@
     align-items: flex-start;
 }
 
-.contact-social-links {
-    display: flex;
-    justify-content: space-evenly;
-    gap: 20px;
-}
-
-.contact-social-links img {
-    height: 40px;
-    width: 40px;
-
-}
-
 .contact-form {
     flex: 1;
     min-width: 300px;
@@ -66,7 +54,7 @@
 }
 
 .contact-form button {
-    background-color: grey;
+    background-color: black;
     color: white;
     padding: 10px;
     border: none;
@@ -76,10 +64,13 @@
 }
 
 .contact-form button:hover {
-    background-color: gray;
-    color: white;
     transform: translateY(-3px);
 }
+
+textarea {
+    resize: vertical;
+}
+
 
 @media (max-width: 768px) {
     .contact-container {

@@ -17,42 +17,45 @@ window.addEventListener("scroll", () => {
 
 document.addEventListener("DOMContentLoaded", function () {
     let isSubpage = window.location.pathname.includes("/pages/");
-    let currentPage = window.location.pathname.split("/").pop(); // Get the current page file name
+    let currentPage = window.location.pathname.split("/").pop() || "index.html"; // Default to index if empty
 
     document.querySelector("header").innerHTML = `
         <nav>
-            <a href="${isSubpage ? "../" : ""}index.html" aria-label="Home" class="${currentPage === 'index.html' || currentPage === '' ? 'active' : ''}">Home</a>
-            <a href="${isSubpage ? "" : "pages/"}about.html" aria-label="About" class="${currentPage === 'about.html' ? 'active' : ''}">About</a>
-            <a href="${isSubpage ? "" : "pages/"}projects.html" aria-label="Projects" class="${currentPage === 'projects.html' ? 'active' : ''}">Projects</a>
-            <a href="${isSubpage ? "" : "pages/"}contact.html" aria-label="Contact" class="${currentPage === 'contact.html' ? 'active' : ''}">Contact</a>
+            <div class="nav-logo">
+                <a href="${isSubpage ? "../" : ""}index.html" aria-label="Home">Qk.</a>
+            </div>
+
+            <div class="nav-links">
+                <a href="${isSubpage ? "../" : ""}index.html" class="nav-item ${currentPage === 'index.html' ? 'active' : ''}">Home</a>
+                <a href="${isSubpage ? "" : "pages/"}about.html" class="nav-item ${currentPage === 'about.html' ? 'active' : ''}">About</a>
+                <a href="${isSubpage ? "" : "pages/"}projects.html" class="nav-item ${currentPage === 'projects.html' ? 'active' : ''}">Projects</a>
+                <a href="${isSubpage ? "" : "pages/"}contact.html" class="nav-item ${currentPage === 'contact.html' ? 'active' : ''}">Contact</a>
+            </div>
+
+            <div class="nav-socials">
+                <a href="mailto:qaiyyumkamal.work@gmail.com" aria-label="Email">
+                    <img src="${isSubpage ? "../" : ""}assets/img/icon/gmail.png" alt="Email">
+                </a>
+                <a href="https://www.linkedin.com/in/qaiyyum-kamal/" target="_blank" aria-label="LinkedIn">
+                    <img src="${isSubpage ? "../" : ""}assets/img/icon/linkedin.png" alt="LinkedIn">
+                </a>
+                <a href="https://github.com/Qaiyyum47" target="_blank" aria-label="GitHub">
+                    <img src="${isSubpage ? "../" : ""}assets/img/icon/github.png" alt="GitHub">
+                </a>
+            </div>
         </nav>
     `;
-
-    // Add CSS for active link (if not already in your styles)
-    const style = document.createElement("style");
-    style.innerHTML = `
-        nav a.active {
-            text-decoration: underline;
-        }
-    `;
-    document.head.appendChild(style);
 });
+
 
 
 document.addEventListener("DOMContentLoaded", function () {
     let isSubpage = window.location.pathname.includes("/pages/");
 
     document.querySelector("#contact").innerHTML = `
-        <div class="contact-s-container">
             <div class="contact-text">
-                <h2 class="contact-title">Let's Connect! 🤝</h2>
-                <p class="contact-description">
-                    I’m always open to collaborations, freelance opportunities, and tech discussions 💬. 
-                    Feel free to reach out 📩 if you’d like to work together or just chat about web development!
-                </p>
-                <a id="contact-link" class="btn" href="${isSubpage ? "" : "pages/"}contact.html" aria-label="Contact me">Contact Me</a>
+                <a href="${isSubpage ? "" : "pages/"}contact.html" class="underline">Contact Me →<a>
             </div>
-        </div>
     `;
 });
 
@@ -63,18 +66,6 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelector("footer").innerHTML = `
         <div class="footer">
             <p>© 2025 Qaiyyum Kamal | Web Developer</p>
-
-            <div class="footer-links">
-                <a href="mailto:qaiyyumkamal.work@gmail.com" aria-label="Email">
-                    <img src="${isSubpage ? "../" : ""}assets/img/icon/gmail.png" alt="Email">
-                </a>
-                <a href="https://github.com/Qaiyyum47" target="_blank" aria-label="GitHub">
-                    <img src="${isSubpage ? "../" : ""}assets/img/icon/github.png" alt="GitHub">
-                </a>
-                <a href="https://www.linkedin.com/in/qaiyyum-kamal/" target="_blank" aria-label="LinkedIn">
-                    <img src="${isSubpage ? "../" : ""}assets/img/icon/linkedin.png" alt="LinkedIn">
-                </a>
-            </div>
         </div>
     `;
 });
@@ -93,6 +84,20 @@ document.querySelectorAll('.accordion-header').forEach(header => {
             content.style.maxHeight = content.scrollHeight + "px";
         }
     });
+});
+
+const form = document.getElementById('contact-form');
+const submitBtn = document.getElementById('submit-btn');
+
+form.addEventListener('input', () => {
+    submitBtn.disabled = !form.checkValidity();
+});
+
+form.addEventListener('submit', (event) => {
+    if (!form.checkValidity()) {
+        event.preventDefault(); // Prevent form submission
+        alert("Please fill in all required fields.");
+    }
 });
 
 

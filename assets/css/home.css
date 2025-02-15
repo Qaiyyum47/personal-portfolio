@@ -1,162 +1,138 @@
-#hero {
-    margin-top: 1%;
-}
-.hero-content {
+.hero-links {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    gap: 20px; /* Only controls spacing between icons */
     align-items: center;
+    padding: 0;
+    margin: 0 0 0 10px; /* Removes any margin affecting layout */
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px; /* Space between buttons */
+    margin-top: 20px;
+    width: 37%;
+}
+
+.hero-buttons .btn {
+    white-space: nowrap; /* Prevents button text from wrapping */
+    transition: background-color 0.3s, color 0.3s; 
+    flex: 1;
     text-align: center;
-    gap: 15px;
 }
 
-#hero-btn, #about-btn {
-    margin-top: 30px;
+.hero-buttons .btn:nth-child(1) {
+    background-color: black;
+    color: white;
+    border: 2px solid black;
 }
 
-#about {
-    padding-bottom: 0;
+.hero-buttons .btn:nth-child(2) {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
 }
 
 .about-container {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
-    width: 90%;
-    flex-wrap: wrap;
+    align-items: stretch; /* Ensures both columns take full height */
+    gap: 20px;
+    width: 100%;
+}
+
+.about-title {
+    flex: 1;
+    border-right: 2px solid black; /* Explicit color for better visibility */
+    padding: 20px; /* Adds spacing inside */
 }
 
 .about-text {
-    position: relative;
-    flex: 1;
-    text-align: left;
+    flex: 2;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    gap: 20px;
-}
-
-.about-links img {
-    width: 43px;
-    height: 43px;
-    border-radius: 0px;
-    transition: transform 0.3s ease-in-out;
-}
-
-.about-image {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-width: 200px;
-    max-width: 400px;
-}
-
-.about-image img {
-    width: 100%;
-    aspect-ratio: 1/1;
-    object-fit: cover;
-}
-
-
-#tech{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start; /* Override center alignment */
-    align-items: center; 
-    padding: 0;
-}
-
-
-#tech-head {
-    margin-top: 5%;
-}
-
-.stack-grid {
-    display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
-}
-
-.stack-card {
-    background: #fff;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    width: 100%;
-    max-width: 45%;
-}
-
-.stack-icon {
-    display: flex;
-    flex-wrap: wrap;
     gap: 15px;
-    justify-content: center;
-    padding: 15px 0;
 }
 
-.icon-container {
+#about-btn {
+    margin-top: auto;
+}
+
+.tech-container {
+    display: flex;
+    align-items: stretch;
+    gap: 20px;
+    width: 100%;
+}
+
+.tech-title {
+    flex: 1;
+    border-right: 2px solid black;
+    padding: 20px;
+}
+
+.tech-text {
+    flex: 2;
+    padding: 20px;
+}
+
+.tech-category {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    padding: 20px 10px;
 }
 
-.icon-container img {
-    width: 50px; /* Adjust as needed */
-    height: 50px;
+.tech-category:nth-child(2) {
+    border-top: 1px solid;
+    border-bottom: 1px solid;
 }
-
-.icon-container p {
-    margin-top: 5px;
-    font-size: 14px;
-    color: #333;
-}
-
 
 .project-grid {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three equal columns */
     gap: 30px;
     width: 100%;
-    margin: 5%;
+    margin: 5% 0;
 }
 
 .project-card {
-    width: 30%;
     background: white;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
+    border: none;
     display: flex;
     flex-direction: column;
-    text-align: center;
+    text-align: left;
+    gap: 15px;
 }
 
-.project-card a {
-    margin-top: 30px;
-    text-align: center;
-    text-decoration: none;
-    align-self: center;
-}
-
-.project-card:hover {
-    transform: translateY(-5px);
+/* Add left and right borders only for the second card */
+.project-card:nth-child(2) {
+    border-left: 1px solid black;
+    border-right: 1px solid black;
 }
 
 .project-thumbnail {
     width: 100%;
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 5 / 4;
     background-size: cover;
     background-position: center;
-    border-radius: 10px;
     margin-bottom: 15px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
+
+.project-thumbnail:hover {
+    transform: scale(1.2); 
+}
+
+.project-card h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 15px; /* Space below the number */
+    padding-bottom: 5px;
+    border-bottom: 1px solid black; /* Bottom border */
+    display: inline-block; /* Ensures the border only covers the text width */
+}
+
 
 @media (max-width: 768px) {
     #hero {

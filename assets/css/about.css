@@ -1,42 +1,28 @@
-.about-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
-    gap: 15px;
-}
 
 .about-container {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
-    width: 90%;
-    flex-wrap: wrap;
+    align-items: stretch; /* Ensures both columns take full height */
+    gap: 20px;
+    width: 100%;
+}
+
+.about-title {
+    flex: 1;
+    border-right: 2px solid black; /* Explicit color for better visibility */
+    padding: 20px; /* Adds spacing inside */
 }
 
 .about-text {
-    flex: 1;
-    text-align: left;
+    flex: 2;
+    padding: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     gap: 20px;
 }
 
-/* About Image Container */
-.about-image-container {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-width: 250px;
-    max-width: 400px;
-}
-
-.about-image-container img {
-    width: 100%;
-    aspect-ratio: 1/1;
+.about-image {
+    width: 80%;
+    aspect-ratio: 6/3;
     object-fit: cover;
+    margin: auto;
 }
