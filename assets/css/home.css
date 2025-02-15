@@ -91,11 +91,13 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Three equal columns */
     gap: 30px;
-    width: 100%;
+    width: inherit;
     margin: 5% 0;
+    flex-wrap: wrap;
 }
 
 .project-card {
+    width: 380px;
     background: white;
     padding: 20px;
     border: none;
