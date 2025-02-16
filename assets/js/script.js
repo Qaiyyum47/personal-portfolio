@@ -5,10 +5,8 @@ window.addEventListener("scroll", () => {
     let scrollTop = window.scrollY || document.documentElement.scrollTop;
 
     if (scrollTop > lastScrollTop) {
-        // Scrolling down, hide header
         header.classList.add("hidden");
     } else {
-        // Scrolling up, show header
         header.classList.remove("hidden");
     }
 
@@ -17,8 +15,7 @@ window.addEventListener("scroll", () => {
 
 document.addEventListener("DOMContentLoaded", function () {
     let isSubpage = window.location.pathname.includes("/pages/");
-    let currentPage = window.location.pathname.split("/").pop() || "index.html"; // Default to index if empty
-
+    let currentPage = window.location.pathname.split("/").pop() || "index.html"; 
     document.querySelector("header").innerHTML = `
         <nav>
             <div class="nav-logo">
@@ -43,11 +40,34 @@ document.addEventListener("DOMContentLoaded", function () {
                     <img src="${isSubpage ? "../" : ""}assets/img/icon/github.png" alt="GitHub">
                 </a>
             </div>
+
+            <div class="hamburger" onclick="toggleMenu()">☰</div>
         </nav>
+
+        <div class="mobile-menu">
+            <div class="hamburger-close" onclick="toggleMenu()">X</div>
+            <a href="${isSubpage ? "../" : ""}index.html" class="nav-item ${currentPage === 'index.html' ? 'active' : ''}">Home</a>
+            <a href="${isSubpage ? "" : "pages/"}about.html" class="nav-item ${currentPage === 'about.html' ? 'active' : ''}">About</a>
+            <a href="${isSubpage ? "" : "pages/"}projects.html" class="nav-item ${currentPage === 'projects.html' ? 'active' : ''}">Projects</a>
+            <a href="${isSubpage ? "" : "pages/"}contact.html" class="nav-item ${currentPage === 'contact.html' ? 'active' : ''}">Contact</a>
+            <div class="mobile-socials">
+                <a href="mailto:qaiyyumkamal.work@gmail.com" aria-label="Email">
+                    <img src="${isSubpage ? "../" : ""}assets/img/icon/gmail.png" alt="Email">
+                </a>
+                <a href="https://www.linkedin.com/in/qaiyyum-kamal/" target="_blank" aria-label="LinkedIn">
+                    <img src="${isSubpage ? "../" : ""}assets/img/icon/linkedin.png" alt="LinkedIn">
+                </a>
+                <a href="https://github.com/Qaiyyum47" target="_blank" aria-label="GitHub">
+                    <img src="${isSubpage ? "../" : ""}assets/img/icon/github.png" alt="GitHub">
+                </a>
+            </div>
+        </div>
     `;
+
+    window.toggleMenu = function () {
+        document.querySelector(".mobile-menu").classList.toggle("active");
+    };
 });
-
-
 
 document.addEventListener("DOMContentLoaded", function () {
     let isSubpage = window.location.pathname.includes("/pages/");
