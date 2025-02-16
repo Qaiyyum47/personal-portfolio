@@ -78,6 +78,10 @@
     content: "In Progress"; /* Change text for elements with the 'no' class */
 }
 
+.project-image.none::after {
+    content: "No Live Site";
+}
+
 .project-image:hover::after {
     opacity: 1;
 }

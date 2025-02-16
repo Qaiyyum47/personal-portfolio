@@ -60,7 +60,7 @@
 
 .tech-container {
     display: flex;
-    align-items: stretch;
+    
     gap: 20px;
     width: 100%;
 }
@@ -135,6 +135,9 @@
     display: inline-block; /* Ensures the border only covers the text width */
 }
 
+.project-card a {
+    align-self: baseline;
+}
 
 @media (max-width: 768px) {
     #hero {
