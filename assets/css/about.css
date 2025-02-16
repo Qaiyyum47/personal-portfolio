@@ -1,8 +1,8 @@
 
 .about-container {
     display: flex;
-    flex-wrap: wrap; /* Allow wrapping */
-    align-items: center;
+    flex-wrap: wrap;
+    align-items: stretch;
     justify-content: space-between;
     gap: 20px;
     width: 100%;
@@ -10,8 +10,9 @@
 
 .about-title {
     flex: 1;
-    border-right: 2px solid black; /* Explicit color for better visibility */
-    padding: 20px; /* Adds spacing inside */
+    max-width: 320px;
+    border-right: 2px solid black;
+    padding: 20px; 
 }
 
 .about-text {
@@ -28,6 +29,7 @@
     object-fit: cover;
     margin: auto;
 }
+
 /* Media Query for smaller screens (768px and below) */
 @media (max-width: 768px){
 
@@ -55,11 +57,11 @@
     }
 
     .about-text {
-        flex-direction: column; /* Stack text and image */
+        flex-direction: column;
         align-items: center;
     }
 
     .about-image {
-        width: 100%; /* Reduce image size on small screens */
+        width: 100%;
     }
 }

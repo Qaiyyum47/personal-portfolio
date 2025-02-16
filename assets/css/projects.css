@@ -25,6 +25,7 @@
 
 .project-title {
     flex: 1;
+    max-width: 360px;
     border-right: 2px solid black; /* Explicit color for better visibility */
     padding: 20px; /* Adds spacing inside */
 }
