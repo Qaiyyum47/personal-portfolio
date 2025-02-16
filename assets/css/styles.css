@@ -139,6 +139,7 @@ nav a {
 }
 
 .mobile-menu {
+    display: flex;
     position: fixed;
     top: 0;
     left: 0;
@@ -157,7 +158,6 @@ nav a {
 }
 
 .mobile-menu.active {
-    display: flex;
     opacity: 1;
     transform: translateX(0);
     pointer-events: auto; 
@@ -364,15 +364,15 @@ footer {
 
 @media (max-width: 480px) {
     h1 {
-        font-size: 3.25rem;
+        font-size: 4rem;
     }
 
     h2 {
-        font-size: 2.75rem;
+        font-size: 3rem;
     }
 
     h3 {
-        font-size: 1.75rem;
+        font-size: 2rem;
     }
 
     p, a {
