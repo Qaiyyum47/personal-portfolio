@@ -46,6 +46,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
         <div class="mobile-menu">
             <div class="hamburger-close" onclick="toggleMenu()">X</div>
+            <a href="${isSubpage ? "../" : ""}index.html" class="nav-item ${currentPage === 'index.html' ? 'active' : ''}">Home</a>
+            <a href="${isSubpage ? "" : "pages/"}about.html" class="nav-item ${currentPage === 'about.html' ? 'active' : ''}">About</a>
+            <a href="${isSubpage ? "" : "pages/"}projects.html" class="nav-item ${currentPage === 'projects.html' ? 'active' : ''}">Projects</a>
+            <a href="${isSubpage ? "" : "pages/"}contact.html" class="nav-item ${currentPage === 'contact.html' ? 'active' : ''}">Contact</a>
             <div class="mobile-socials">
                 <a href="mailto:qaiyyumkamal.work@gmail.com" aria-label="Email">
                     <img src="${isSubpage ? "../" : ""}assets/img/icon/gmail.png" alt="Email">
@@ -57,11 +61,6 @@ document.addEventListener("DOMContentLoaded", function () {
                     <img src="${isSubpage ? "../" : ""}assets/img/icon/github.png" alt="GitHub">
                 </a>
             </div>
-            <a href="${isSubpage ? "../" : ""}index.html" class="nav-item ${currentPage === 'index.html' ? 'active' : ''}">Home</a>
-            <a href="${isSubpage ? "" : "pages/"}about.html" class="nav-item ${currentPage === 'about.html' ? 'active' : ''}">About</a>
-            <a href="${isSubpage ? "" : "pages/"}projects.html" class="nav-item ${currentPage === 'projects.html' ? 'active' : ''}">Projects</a>
-            <a href="${isSubpage ? "" : "pages/"}contact.html" class="nav-item ${currentPage === 'contact.html' ? 'active' : ''}">Contact</a>
-            
         </div>
     `;
 

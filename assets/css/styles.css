@@ -152,14 +152,11 @@ nav a {
     justify-content: center;
     text-align: center;
     opacity: 0;
-    transform: translateX(100%);
-    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
     pointer-events: none; 
 }
 
 .mobile-menu.active {
     opacity: 1;
-    transform: translateX(0);
     pointer-events: auto; 
 }
 
