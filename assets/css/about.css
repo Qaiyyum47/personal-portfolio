@@ -1,7 +1,9 @@
 
 .about-container {
     display: flex;
-    align-items: stretch; /* Ensures both columns take full height */
+    flex-wrap: wrap; /* Allow wrapping */
+    align-items: center;
+    justify-content: space-between;
     gap: 20px;
     width: 100%;
 }
@@ -25,4 +27,39 @@
     aspect-ratio: 6/3;
     object-fit: cover;
     margin: auto;
+}
+/* Media Query for smaller screens (768px and below) */
+@media (max-width: 768px){
+
+    .about-container,
+    .tech-container {
+        flex-direction: column;
+    }
+
+    .about-title,
+    .tech-title {
+        border-right: 0px;
+        border-bottom: 2px solid black;
+    }
+}
+
+/* Media Query for smaller screens (480px and below) */
+@media (max-width: 480px) {
+    .about-container {
+        flex-direction: column;
+    }
+
+    .about-title {
+        border-right: 0px solid black;
+        border-bottom: 2px solid black;
+    }
+
+    .about-text {
+        flex-direction: column; /* Stack text and image */
+        align-items: center;
+    }
+
+    .about-image {
+        width: 100%; /* Reduce image size on small screens */
+    }
 }

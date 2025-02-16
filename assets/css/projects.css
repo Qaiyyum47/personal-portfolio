@@ -7,13 +7,12 @@
     border-bottom: 0px solid;
 }
 
-#project-list {
+#projects-list {
     width: 80vw;
-    min-height: 65vh;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     padding: 0; 
+    gap: 10px;
 }
 
 .projects-container {
@@ -21,6 +20,7 @@
     align-items: stretch; /* Ensures both columns take full height */
     gap: 20px;
     width: 100%;
+    flex-wrap: wrap; /* Allow items to wrap on small screens */
 }
 
 .project-title {
@@ -96,6 +96,7 @@
     border-bottom: 2px solid;
 }
 
+/* Wrap the list items inside the project text */
 .project-text ul {
     padding-left: 20px;
     margin-left: 2%;
@@ -113,7 +114,6 @@
     border-bottom: 1px solid black; /* Bottom border */
     display: inline-block; /* Ensures the border only covers the text width */
 }
-
 
 .accordion-header {
     display: flex;
@@ -157,14 +157,17 @@
     padding: 10px 15px;
 }
 
+.project-text .short-text {
+    display: none;
+}
+/* Media Query for screens smaller than 768px */
 @media (max-width: 768px) {
-
     .project-image-container {
         max-width: 400px;
     }
 
-    .project-image-container img {
-        aspect-ratio: 4/3; /* More square aspect ratio for tablets */
+    .project-image img {
+        transform: scale(2);
     }
 
     .accordion-header {
@@ -177,25 +180,32 @@
     }
 
     .accordion-header:hover {
-        transform: none; /* Disable hover effect */
+        transform: none;
     }
 }
 
+/* Media Query for screens smaller than 480px */
 @media (max-width: 480px) {
+    .project-text .long-text {
+        display: none;
+    }
+    .project-text .short-text {
+        display: block;
+    }
 
     .project-text {
-        text-align: center;
-        align-items: center;
-        gap: 10px;
+        gap: 15px;
     }
 
     .project-image-container {
-        min-width: 200px;
-        max-width: 350px;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
     }
 
-    .project-image-container img {
-        aspect-ratio: 1; /* Square aspect ratio for small screens */
+    .project-image {
+        aspect-ratio: 3/2;
+        padding: 0 0 10px 0;
     }
 
     .accordion-header {
@@ -213,6 +223,23 @@
     }
 
     .accordion-header:hover {
-        transform: none; /* Disable hover effect */
+        transform: none;
+    }
+
+    .projects-container {
+        flex-direction: column;
+    }
+
+    .project-title,
+    .project-image {
+        flex: none;
+        width: 100%;
+        border-right: 0;
+    }
+
+    .project-text ul {
+        padding-left: 0;
+        margin-left: 0;
+        gap: 10px;
     }
 }

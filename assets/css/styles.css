@@ -173,6 +173,8 @@ nav a {
     justify-content: center;
     width: 100%;
     flex: 1; 
+    background-color: black;
+    color: white;
 }
 
 .mobile-menu a {
@@ -392,6 +394,10 @@ footer {
     .btn {
         padding: 8px;
         font-size: 0.9rem;
+    }
+
+    nav {
+        align-items: center;
     }
 
     .nav-links,
