@@ -13,7 +13,6 @@
     flex: 1;
     min-width: 300px;
     padding: 20px 0px;
-    border-radius: 8px;
     text-align: left;
     gap: 10px;
     display: flex;
@@ -71,6 +70,20 @@ textarea {
     resize: vertical;
 }
 
+.nav-socials-contact p {
+    margin-bottom: 5%;
+}
+
+.nav-socials-contact img {
+    height: 32px;
+    padding: 0px 10px;
+    transition: opacity 0.3s;
+}
+
+.nav-contact-center {
+    display: flex;
+    justify-content: center;
+}
 
 @media (max-width: 768px) {
     .contact-container {
@@ -81,4 +94,5 @@ textarea {
     .contact-info, .contact-form {
         width: 100%;
     }
+
 }

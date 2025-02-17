@@ -8,9 +8,9 @@
 
 .hero-buttons {
     display: flex;
-    gap: 15px; 
+    gap: 10px; 
     margin-top: 20px;
-    width: 37%;
+    width: 40%;
 }
 
 .hero-buttons .btn {
@@ -18,6 +18,7 @@
     transition: background-color 0.3s, color 0.3s; 
     flex: 1;
     text-align: center;
+    width: 100%;
 }
 
 .hero-buttons .btn:nth-child(1) {
@@ -32,7 +33,7 @@
     border: 2px solid black;
 }
 
-.about-container {
+.about-container, .tech-container {
     display: flex;
     align-items: stretch; 
     gap: 20px;
@@ -57,13 +58,6 @@
 
 #about-btn {
     margin-top: auto;
-}
-
-.tech-container {
-    display: flex;
-    
-    gap: 20px;
-    width: 100%;
 }
 
 .tech-title {
@@ -93,13 +87,13 @@
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
-    width: inherit;
     margin: 5% 0;
-    justify-content: space-between; /* Distribute items evenly */
+    justify-content: space-between;
 }
 
 .project-card {
-    width: 380px;
+    flex: 1;
+    min-width: 300px;
     background: white;
     padding: 20px;
     border: none;
@@ -115,8 +109,9 @@
 }
 
 .project-thumbnail {
+    border: 1px solid;
     width: 100%;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 16 / 10;
     background-size: cover;
     background-position: center;
     margin-bottom: 15px;
@@ -124,7 +119,7 @@
 }
 
 .project-thumbnail:hover {
-    transform: scale(1.4); 
+    transform: scale(1.05); 
 }
 
 .project-card h2 {
@@ -141,8 +136,6 @@
 }
 
 @media (max-width: 768px) {
-
-
     .icon-container img {
         width: 40px;
         height: 40px;
@@ -155,8 +148,8 @@
     .project-grid {
         display: flex;
         flex-wrap: wrap;
-        justify-content: center; /* Center items horizontally */
-        gap: 20px; /* Adjust the gap between items */
+        justify-content: center;
+        gap: 20px; 
     }
     
     .project-card {
@@ -176,6 +169,13 @@
 }
 
 @media (max-width: 480px) {
+    .long-text {
+        display: none;
+    }
+    .short-text {
+        display: block;
+    }
+
     header {
         width: 90vw;
     }
@@ -197,6 +197,11 @@
     .tech-title {
         border-right: 0px;
         border-bottom: 2px solid black;
+
+    }
+
+    .about-text {
+        max-height: 50vh;
     }
 
     .stack-card {
@@ -208,22 +213,6 @@
         gap: 10px;
     }
 
-    .icon-container img {
-        width: 40px;
-        height: 40px;
-    }
-
-    .icon-container p {
-        font-size: 12px;
-    }
-
-    .project-grid {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center; 
-        gap: 20px; 
-    }
-
     .project-card {
         width: 100%;
     }
@@ -231,6 +220,16 @@
     .project-card:nth-child(2) {
         border: 2px solid black;
         border-width: 2px 0; 
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        width: 60%;
+        margin-top: 20%;
+    }
+
+    .hero-buttons a {
+        margin-top: 0;
     }
 }
 

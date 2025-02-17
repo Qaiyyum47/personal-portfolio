@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 </a>
             </div>
 
-            <div class="hamburger" onclick="toggleMenu()">☰</div>
+            <p class="hamburger" onclick="toggleMenu()">☰</p>
         </nav>
 
         <div class="mobile-menu">
@@ -85,7 +85,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     document.querySelector("footer").innerHTML = `
         <div class="footer">
-            <p>© 2025 Qaiyyum Kamal | Web Developer</p>
+            <p class="long-text">© 2025 Qaiyyum Kamal | Web Developer</p>
+            <div class="short-text">
+                <p>© 2025 Qaiyyum Kamal</p>
+                <p>Web Developer</p>
+            </div>
         </div>
     `;
 });
@@ -115,7 +119,7 @@ form.addEventListener('input', () => {
 
 form.addEventListener('submit', (event) => {
     if (!form.checkValidity()) {
-        event.preventDefault(); // Prevent form submission
+        event.preventDefault(); 
         alert("Please fill in all required fields.");
     }
 });

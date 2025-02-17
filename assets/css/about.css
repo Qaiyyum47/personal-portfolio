@@ -8,16 +8,19 @@
     width: 100%;
 }
 
+.about-title,
+.about-text {
+    padding: 20px;
+}
+
 .about-title {
     flex: 1;
     max-width: 320px;
     border-right: 2px solid black;
-    padding: 20px; 
 }
 
 .about-text {
     flex: 2;
-    padding: 20px;
     display: flex;
     flex-direction: column;
     gap: 20px;
