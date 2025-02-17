@@ -12,7 +12,7 @@
 .contact-info {
     flex: 1;
     min-width: 300px;
-    padding: 20px;
+    padding: 20px 0px;
     border-radius: 8px;
     text-align: left;
     gap: 10px;

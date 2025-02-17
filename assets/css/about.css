@@ -30,22 +30,6 @@
     margin: auto;
 }
 
-/* Media Query for smaller screens (768px and below) */
-@media (max-width: 768px){
-
-    .about-container,
-    .tech-container {
-        flex-direction: column;
-    }
-
-    .about-title,
-    .tech-title {
-        border-right: 0px;
-        border-bottom: 2px solid black;
-    }
-}
-
-/* Media Query for smaller screens (480px and below) */
 @media (max-width: 480px) {
     .about-container {
         flex-direction: column;

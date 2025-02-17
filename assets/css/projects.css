@@ -17,17 +17,16 @@
 
 .projects-container {
     display: flex;
-    align-items: stretch; /* Ensures both columns take full height */
+    align-items: stretch; 
     gap: 20px;
     width: 100%;
-    flex-wrap: wrap; /* Allow items to wrap on small screens */
+    flex-wrap: wrap;
 }
 
 .project-title {
     flex: 1;
     max-width: 360px;
-    border-right: 2px solid black; /* Explicit color for better visibility */
-    padding: 20px; /* Adds spacing inside */
+    border-right: 2px solid black; 
 }
 
 .project-image {
@@ -37,23 +36,22 @@
     flex-direction: column;
     justify-content: center;
     width: 90%;
-    aspect-ratio: 16 / 9;
-    object-fit: cover;
     margin: auto;
-}
-
-.project-image {
     position: relative;
     overflow: hidden;
 }
 
-.project-image img {
+.project-thumbnail {
     width: 100%;
-    height: auto;
-    transition: filter 0.3s ease, transform 0.3s ease;
+    aspect-ratio: 16 / 9;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border-radius: 8px;
 }
 
-.project-image:hover img {
+.project-thumbnail:hover {
     filter: grayscale(50%);
     transform: scale(1.05);
 }
@@ -76,7 +74,7 @@
 }
 
 .project-image.no::after {
-    content: "In Progress"; /* Change text for elements with the 'no' class */
+    content: "In Progress"; 
 }
 
 .project-image.none::after {
@@ -97,7 +95,6 @@
     border-bottom: 2px solid;
 }
 
-/* Wrap the list items inside the project text */
 .project-text ul {
     padding-left: 20px;
     margin-left: 2%;
@@ -110,24 +107,24 @@
     width: 100%;
     font-size: 2rem;
     font-weight: bold;
-    margin-bottom: 15px; /* Space below the number */
+    margin-bottom: 15px;
     padding-bottom: 5px;
-    border-bottom: 1px solid black; /* Bottom border */
-    display: inline-block; /* Ensures the border only covers the text width */
+    border-bottom: 1px solid black; 
+    display: inline-block; 
 }
 
 .accordion-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%; /* Make sure it doesn't go outside the container */
+    width: 100%; 
     padding: 50px 15px;
     background-color: white;
     border: 1px solid;
     border-radius: 15px;
     cursor: pointer;
     transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
-    box-sizing: border-box; /* Ensures padding doesn't increase width */
+    box-sizing: border-box; 
 }
 
 .accordion-header:hover {
@@ -146,8 +143,16 @@
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.4s ease-out, padding 0.4s ease;
-    padding: 0 15px;
+    padding: 0px;
 }
+
+.accordion-content > * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 
 .accordion-header.active .accordion-toggle {
     transform: rotate(180deg);
@@ -155,13 +160,13 @@
 
 .accordion-header.active + .accordion-content {
     max-height: 500px;
-    padding: 10px 15px;
+    padding: 10px 0px;
 }
 
 .project-text .short-text {
     display: none;
 }
-/* Media Query for screens smaller than 768px */
+
 @media (max-width: 768px) {
     .project-image-container {
         max-width: 400px;
@@ -185,7 +190,6 @@
     }
 }
 
-/* Media Query for screens smaller than 480px */
 @media (max-width: 480px) {
     .project-text .long-text {
         display: none;
@@ -220,7 +224,7 @@
     }
 
     .accordion-content {
-        padding: 0 8px;
+        padding: 0px;
     }
 
     .accordion-header:hover {
@@ -235,6 +239,7 @@
     .project-image {
         flex: none;
         width: 100%;
+        padding: 20px 0px;
         border-right: 0;
     }
 

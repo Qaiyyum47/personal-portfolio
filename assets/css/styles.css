@@ -140,7 +140,7 @@ nav a {
 
 .mobile-menu {
     display: flex;
-    position: fixed;
+    position: absolute;;
     top: 0;
     left: 0;
     width: 100%;
@@ -152,11 +152,14 @@ nav a {
     justify-content: center;
     text-align: center;
     opacity: 0;
+    transform: translateX(100%);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
     pointer-events: none; 
 }
 
 .mobile-menu.active {
     opacity: 1;
+    transform: translateX(0);
     pointer-events: auto; 
 }
 
@@ -185,6 +188,10 @@ nav a {
     height: 50px;
     border-top: 1px solid black;
     flex: 2;
+}
+
+.mobile-menu a.active {
+    text-decoration: underline;
 }
 
 .mobile-socials {
@@ -230,13 +237,13 @@ nav a {
     min-height: 65vh;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Align content to the top */
-    padding: 50px 0; /* Adds space above and below */
+    justify-content: flex-start; 
+    padding: 50px 0; 
     border-bottom: 2px solid black;
 }
 
 .section > * {
-    flex: 1; /* Makes all direct children take equal available height */
+    flex: 1; 
 }
 
 #contact{
@@ -246,7 +253,7 @@ nav a {
     flex-direction: column;
     justify-content: center; 
     align-items: center;
-    padding: 50px 0; /* Adds space above and below */
+    padding: 50px 0; 
     border-bottom: 2px solid black;
 }
 
@@ -266,17 +273,17 @@ nav a {
     content: "";
     position: absolute;
     left: 0;
-    bottom: -2px; /* Adjust distance from text */
+    bottom: -2px;
     width: 100%;
-    height: 2px; /* Thickness of underline */
+    height: 2px; 
     background-color: black;
-    transform: scaleX(0); /* Start invisible */
+    transform: scaleX(0); 
     transform-origin: right;
     transition: transform 0.3s ease-out;
 }
 
 .underline:hover::after {
-    transform: scaleX(1); /* Expand on hover */
+    transform: scaleX(1); 
     transform-origin: left;
 }
 
@@ -343,21 +350,21 @@ footer {
     }
 
     nav {
-        padding: 5px 15px; /* Reduce padding */
-        border-radius: 8px; /* Slightly smaller border-radius */
+        padding: 5px 15px; 
+        border-radius: 8px; 
     }
 
     nav a {
-        padding: 8px 12px; /* Reduce padding for links */
-        font-size: 1rem; /* Smaller text */
+        padding: 8px 12px; 
+        font-size: 1rem; 
     }
 
     .nav-logo a {
-        font-size: 1.5rem; /* Reduce logo size */
+        font-size: 1.5rem;
     }
 
     .nav-socials img {
-        height: 20px; /* Make icons smaller */
+        height: 20px; 
     }
 }
 
@@ -399,10 +406,10 @@ footer {
 
     .nav-links,
     .nav-socials {
-        display: none; /* Hide normal nav links */
+        display: none; 
     }
 
     .hamburger {
-        display: block; /* Show the hamburger menu */
+        display: block;
     }
 }
