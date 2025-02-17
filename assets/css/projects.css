@@ -1,4 +1,7 @@
 #hero {
+    min-height: 80vh;
+    padding-top: 50px; 
+    padding-bottom: 0px;
     border-bottom: 0;
 }
 
@@ -247,5 +250,13 @@
 
     .project-text p:first-child {
         margin-bottom: 5%;
+    }
+
+    .pt-head {
+        width: inherit;
+    }
+
+    #hero {
+        min-height: 74vh;
     }
 }
