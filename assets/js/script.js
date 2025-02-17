@@ -44,6 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <p class="hamburger" onclick="toggleMenu()">☰</p>
         </nav>
 
+        
         <div class="mobile-menu">
             <div class="hamburger-close" onclick="toggleMenu()">X</div>
             <a href="${isSubpage ? "../" : ""}index.html" class="nav-item ${currentPage === 'index.html' ? 'active' : ''}">Home</a>
@@ -62,11 +63,21 @@ document.addEventListener("DOMContentLoaded", function () {
                 </a>
             </div>
         </div>
+        <div class="mobile-overlay"></div>
     `;
 
     window.toggleMenu = function () {
-        document.querySelector(".mobile-menu").classList.toggle("active");
+        const mobileMenu = document.querySelector(".mobile-menu");
+        const mobileOverlay = document.querySelector(".mobile-overlay");
+        mobileMenu.classList.toggle("active");
+        mobileOverlay.style.display = mobileMenu.classList.contains("active") ? "block" : "none";
     };
+
+    document.querySelector('.mobile-overlay').addEventListener('click', function() {
+        document.querySelector('.mobile-menu').classList.remove('active');
+        this.style.display = 'none'; 
+    });
+    
 });
 
 document.addEventListener("DOMContentLoaded", function () {
