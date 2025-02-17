@@ -211,6 +211,14 @@ nav a {
     height: 40px;
 }
 
+.mobile-menu {
+    overflow: visible;
+}
+
+.mobile-socials {
+    overflow: visible;
+}
+
 #hero {
     width: 80vw;
     min-height: 90vh;
