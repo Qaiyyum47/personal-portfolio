@@ -78,6 +78,10 @@
     padding: 20px 10px;
 }
 
+.tech-category h3 {
+    padding-bottom: 1%;
+}
+
 .tech-category:nth-child(2) {
     border-top: 1px solid;
     border-bottom: 1px solid;
