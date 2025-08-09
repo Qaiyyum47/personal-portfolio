@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore my personal portfolio showcasing web development projects, including HTML, CSS, and JavaScript work. Contact me for professional web development services.">
+    <meta name="keywords" content="Personal Portfolio, Web Developer Portfolio, Front-End Developer, HTML, CSS, JavaScript, Web Development Projects, Responsive Web Design, Interactive Web Development, Portfolio Projects">
+    <meta name="author" content="Qaiyyum Kamal">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/contact.css">
+    <title>Contact - Qaiyyum's Portfolio</title>
+</head>
+<body>
+    <header></header>
+
+    <main>
+        <section id="contact-section" class="section diff">
+            <div class="contact-container">
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <h1>Let’s Connect!</h1>
+                    <p class="long-text">
+                        I’m open to exciting opportunities across various fields. 
+                        Let’s create something amazing together!
+                    </p>          
+                    <div class="short-text nav-socials-contact">
+                        <p>Have a project, idea, or just want to collaborate? Let’s build something amazing!</p>
+                        <div class="nav-contact-center">
+                            <a href="mailto:qaiyyumkamal.work@gmail.com" aria-label="Email">
+                                <img src="../assets/img/icon/gmail.png" alt="Email">
+                            </a>
+                            <a href="https://www.linkedin.com/in/qaiyyum-kamal/" target="_blank" aria-label="LinkedIn">
+                                <img src="../assets/img/icon/linkedin.png" alt="LinkedIn">
+                            </a>
+                            <a href="https://github.com/Qaiyyum47" target="_blank" aria-label="GitHub">
+                                <img src="../assets/img/icon/github.png" alt="GitHub">
+                            </a>
+                        </div>
+                    </div>                    
+                </div>
+        
+                <!-- Contact Form -->
+                <div class="contact-form">
+                    <h3>Send a Message</h3>
+                    <form action="https://formsubmit.co/qaiyyumkamal.work@gmail.com" method="POST" enctype="multipart/form-data" id="contact-form">
+                        <input type="hidden" name="_captcha" value="false">
+                    
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required>
+                    
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                    
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    
+                        <button type="submit" id="submit-btn" disabled>Send</button>
+                    </form>               
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer></footer>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

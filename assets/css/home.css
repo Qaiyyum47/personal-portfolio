@@ -1,0 +1,239 @@
+.hero-links {
+    display: flex;
+    gap: 20px; 
+    align-items: center;
+    padding: 0;
+    margin: 0 0 0 10px; 
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 10px; 
+    margin-top: 20px;
+    width: 40%;
+}
+
+.hero-buttons .btn {
+    white-space: nowrap; 
+    transition: background-color 0.3s, color 0.3s; 
+    flex: 1;
+    text-align: center;
+    width: 100%;
+}
+
+.hero-buttons .btn:nth-child(1) {
+    background-color: black;
+    color: white;
+    border: 2px solid black;
+}
+
+.hero-buttons .btn:nth-child(2) {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+}
+
+.about-container, .tech-container {
+    display: flex;
+    align-items: stretch; 
+    gap: 20px;
+    width: 100%;
+}
+
+.about-title {
+    flex: 1;
+    max-width: 360px;
+    border-right: 2px solid black; 
+    padding: 20px;
+}
+
+.about-text {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    gap: 15px;
+}
+
+#about-btn {
+    margin-top: auto;
+}
+
+.tech-title {
+    flex: 1;
+    max-width: 360px;
+    border-right: 2px solid black;
+    padding: 20px;
+}
+
+.tech-text {
+    flex: 2;
+    padding: 20px;
+}
+
+.tech-category {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 10px;
+}
+
+.tech-category h3 {
+    padding-bottom: 1%;
+}
+
+.tech-category:nth-child(2) {
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+}
+
+.project-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 5% 0;
+    justify-content: space-between;
+}
+
+.project-card {
+    flex: 1;
+    min-width: 300px;
+    background: white;
+    padding: 20px;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 15px;
+}
+
+.project-card:nth-child(2) {
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.project-thumbnail {
+    border: 1px solid;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.project-thumbnail:hover {
+    transform: scale(1.05); 
+}
+
+.project-card h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 15px; 
+    padding-bottom: 5px;
+    border-bottom: 1px solid black; 
+    display: inline-block; 
+}
+
+.project-card a {
+    align-self: baseline;
+}
+
+@media (max-width: 768px) {
+    .icon-container img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .icon-container p {
+        font-size: 12px;
+    }
+
+    .project-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px; 
+    }
+    
+    .project-card {
+        width: 100%;
+    }
+
+    .project-card:nth-child(2) {
+        border-left: 0px solid black;
+        border-right: 0px solid black;
+        border-top: 2px solid black;
+        border-bottom: 2px solid black;
+    }
+
+    .project-thumbnail:hover {
+        transform: none; 
+    }
+}
+
+@media (max-width: 480px) {
+    .long-text {
+        display: none;
+    }
+    .short-text {
+        display: block;
+    }
+
+    header {
+        width: 90vw;
+    }
+
+    #hero {
+        margin-top: 5%;
+    }
+
+    .hero-content {
+        gap: 8px;
+    }
+
+    .about-container,
+    .tech-container {
+        flex-direction: column;
+    }
+
+    .about-title,
+    .tech-title {
+        border-right: 0px;
+        border-bottom: 2px solid black;
+
+    }
+
+    .about-text {
+        max-height: 50vh;
+    }
+
+    .stack-card {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .stack-icon {
+        gap: 10px;
+    }
+
+    .project-card {
+        width: 100%;
+    }
+
+    .project-card:nth-child(2) {
+        border: 2px solid black;
+        border-width: 2px 0; 
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        width: 60%;
+        margin-top: 20%;
+    }
+
+    .hero-buttons a {
+        margin-top: 0;
+    }
+}
+
